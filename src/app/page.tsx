@@ -10,7 +10,7 @@ export default function Home() {
     <div className="overflow-x-hidden text-white">
       <Navbar/>
       <Hero />
-      <Timer />
+      
     </div>
   );
 }

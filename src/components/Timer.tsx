@@ -6,7 +6,7 @@ import Image from "next/image";
 
 
 const Timer: React.FC = () => {
-  const targetDate = new Date("2024-03-05T23:59:59");
+  const targetDate = new Date("2024-03-15T23:59:59");
   console.log(targetDate);
 
   return (
