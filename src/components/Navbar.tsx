@@ -13,12 +13,12 @@ interface MobileMenuProps {
 const MobileMenu: React.FC<MobileMenuProps> = ({ closeMenu }) => {
   return (
     <div className="fixed top-0 right-0 bottom-0 left-0 bg-black bg-opacity-80 z-50">
-      <div className="flex justify-end p-5 h-[150px]">
+      <div className="flex justify-end p-10 h-[150px]">
         <button className="text-white" onClick={closeMenu}>
           <FaTimes />
         </button>
       </div>
-      <ul className="flex flex-col items-center h-full gap-10 items-center justify-center text-2xl">
+      <ul className="flex flex-col h-full gap-10 items-center justify-center text-2xl">
         <li>
           <Link href="/about" onClick={closeMenu}>
             ABOUT
@@ -82,7 +82,7 @@ const Navbar = () => {
 
   return (
     <div className={`w-screen transition duration-300 mr-12 ease-in-out fixed z-40 ${navbar ? 'top-0 bg-navBg/80 backdrop-blur-xl ' : ''} left-0 right-0`}>
-      <div className={`flex mx-auto pr-8 px-4 2xl:px-0 ${navbar ? 'py-2' : 'py-1'} max-w-7xl justify-between items-center`}>
+      <div className={`flex mx-auto pr-8 px-8 2xl:px-0 ${navbar ? 'py-2' : 'py-4'} max-w-7xl justify-between items-center`}>
         <div>
           <Link href='/'>
             <Image
