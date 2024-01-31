@@ -12,7 +12,7 @@ export const debate_cross_teams = z
   email_1:z.string({
     required_error:"Email is Required"
   }),
-  contact_1:z.number({
+  contact_1:z.string({
     required_error:"Phone number is Required"
   }),
   institution_1:z.string({
@@ -24,7 +24,7 @@ export const debate_cross_teams = z
   email_2:z.string({
     required_error:"Email is Required"
   }),
-  contact_2:z.number({
+  contact_2:z.string({
     required_error:"Phone number is Required"
   }),
   institution_2:z.string({
@@ -36,7 +36,7 @@ export const debate_cross_teams = z
   email_3:z.string({
     required_error:"Email is Required"
   }),
-  contact_3:z.number({
+  contact_3:z.string({
     required_error:"Phone number is Required"
   }),
   institution_3:z.string({

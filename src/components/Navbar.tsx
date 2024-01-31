@@ -81,8 +81,8 @@ const Navbar = () => {
   };
 
   return (
-    <div className={`w-screen transition duration-300 mr-12 ease-in-out fixed z-40 ${navbar ? 'top-0 bg-navBg/80 backdrop-blur-xl ' : ''} left-0 right-0`}>
-      <div className={`flex mx-auto pr-8 px-8 2xl:px-0 ${navbar ? 'py-2' : 'py-4'} max-w-7xl justify-between items-center`}>
+    <div className={`w-screen transition duration-300 mr-12 ease-in-out z-40 mb-10 fixed`}>
+      <div className={`flex mx-auto pr-8 px-8 2xl:px-0 max-w-7xl justify-between items-center`}>
         <div>
           <Link href='/'>
             <Image

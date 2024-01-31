@@ -1,0 +1,28 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model form1 {
+  id            String  @id @default(uuid())
+  team_name     String
+  speaker_1     String
+  email_1       String
+  contact_1     String
+  institution_1 String
+  speaker_2     String
+  email_2       String
+  contact_2     String
+  institution_2 String
+  speaker_3     String
+  email_3       String
+  contact_3     String
+  institution_3 String
+  accomodation  Boolean @default(false)
+  message       String
+}
