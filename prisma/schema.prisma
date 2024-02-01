@@ -26,3 +26,19 @@ model form1 {
   accomodation  Boolean @default(false)
   message       String
 }
+
+model form2 {
+  id               String  @id @default(uuid())
+  email            String
+  institution      String
+  name_poc1        String
+  contact_poc1     String
+  email_poc1       String
+  name_poc2        String
+  contact_poc2     String
+  email_poc2       String
+  slots            String
+  ajudicator_slots String
+  accomodation     Boolean @default(false)
+  message          String
+}

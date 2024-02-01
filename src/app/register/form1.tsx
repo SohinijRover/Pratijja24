@@ -47,7 +47,7 @@ const MyForm = () => {
     >
       {({ isSubmitting }) => (
         <Form>
-          <div className="flex flex-col items-center justify-center"><Box mb="10px">
+          <div className="flex flex-col items-center justify-center p-5-"><Box mb="10px">
             <Typography variant="body1" fontWeight={600}>
               Team Name:
             </Typography>
