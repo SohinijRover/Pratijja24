@@ -21,10 +21,10 @@ export default function RootLayout({
       <body
         className={`bg-hero bg-cover bg-center bg-no-repeat`}
       >
-      <div className="flex min-h-screen flex-col">
-        <div className="h-full flex-grow">{children}</div>
-      </div>
-        <Toaster />  
+        <div className="flex flex-col">
+          <div>{children}</div>
+        </div>
+        <Toaster />
       </body>
     </html>
   );
