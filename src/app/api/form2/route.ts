@@ -17,24 +17,32 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  const { team_name,speaker_1,email_1,contact_1 ,institution_1,speaker_2,email_2,contact_2,institution_2,speaker_3,email_3,contact_3,institution_3,accomodation, message} = data;
+  const { email,
+    institution,
+    name_poc1,
+    contact_poc1,
+    email_poc1,
+    name_poc2,
+    contact_poc2,
+    email_poc2,
+    slots,
+    ajudicator_slots,
+    accomodation,
+    message} = data;
 
   try {
-    await db.form1.create({
+    await db.form2.create({
       data: {
-        team_name,
-        speaker_1,
-        email_1,
-        contact_1,
-        institution_1,
-        speaker_2,
-        email_2,
-        contact_2,
-        institution_2,
-        speaker_3,
-        email_3,
-        contact_3,
-        institution_3,
+        email,
+        institution,
+        name_poc1,
+        contact_poc1,
+        email_poc1,
+        name_poc2,
+        contact_poc2,
+        email_poc2,
+        slots,
+        ajudicator_slots,
         accomodation,
         message,
       },
