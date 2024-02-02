@@ -201,7 +201,7 @@ const Form2 = () => {
               aria-label="ajudicator_slots"
               name="ajudicator_slots"
               id="ajudicator_slots"
-              value={values.ajudicator_slots}
+              value={values.ajudicator_slots  }
               onChange={handleChange}
             >
               {[1, 2, 3, 4, 5].map((ajudicator_slots) => (

@@ -1,118 +1,79 @@
 "use client"
-import { useState, useEffect } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import logo from "/public/pratijja.png";
 import contact from "/public/navbar/contact.png";
 
-interface MobileMenuProps {
-  closeMenu: () => void;
-}
+import MobileNav from "./MobileNav";
 
-const MobileMenu: React.FC<MobileMenuProps> = ({ closeMenu }) => {
-  return (
-    <div className="fixed top-0 right-0 bottom-0 left-0 bg-black bg-opacity-80 z-50">
-      <div className="flex justify-end p-10 h-[150px]">
-        <button className="text-white" onClick={closeMenu}>
-          <FaTimes />
-        </button>
-      </div>
-      <ul className="flex flex-col h-full gap-10 items-center justify-center text-2xl">
-        <li>
-          <Link href="/about" onClick={closeMenu}>
-            ABOUT
-          </Link>
-        </li>
-        <li>
-          <Link href="/event" onClick={closeMenu}>
-            EVENT
-          </Link>
-        </li>
-        <li>
-          <Link href="/speaker" onClick={closeMenu}>
-            SPEAKER
-          </Link>
-        </li>
-        <li>
-          <Link href="/issues" onClick={closeMenu}>
-            CONTACT US
-          </Link>
-        </li>
-      </ul>
-    </div>
-  );
-};
-const Navbar = () => {
-  const [navbar, setNavbar] = useState(false);
-  const [windowWidth, setWindowWidth] = useState(0);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  const changeBackground = () => {
-    if (window.scrollY >= 100) {
-      setNavbar(true);
-    } else {
-      setNavbar(false);
-    }
+const Navbar: React.FC = () => {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const toggleNavbar = () => {
+    setIsOpen(!isOpen);
   };
-
-  const handleResize = () => {
-    setWindowWidth(window.innerWidth);
-  };
+  const [showBackground, setShowBackground] = useState<boolean>(false);
 
   useEffect(() => {
-    changeBackground();
-    window.addEventListener("scroll", changeBackground);
-    window.addEventListener("resize", handleResize);
-    setWindowWidth(window.innerWidth);
+    const handleScroll = () => {
+      if (window.scrollY >= 20) {
+        setShowBackground(true);
+      } else setShowBackground(false);
+    };
+
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener("scroll", changeBackground);
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
-  const toggleMobileMenu = () => {
-    setMobileMenuOpen(!mobileMenuOpen);
-  };
-
-  const closeMobileMenu = () => {
-    setMobileMenuOpen(false);
-  };
-
   return (
-    <div className={`w-screen transition duration-300 mr-12 ease-in-out z-40 mb-10 fixed`}>
-      <div className={`flex mx-auto pr-8 px-8 2xl:px-0 max-w-7xl justify-between items-center`}>
-        <div>
-          <Link href='/'>
+    <>
+      <nav
+        className={`${
+          showBackground && "lg:backdrop-blur-[80px]"
+        } top-0  fixed  z-[50] left-0 right-0  `}
+      >
+        <div className="flex max-w-[1900px] mx-auto justify-between w-full  p-4 md:p-5 lg:px-20 lg:py-6 rounded-sm items-center text-white">
+          <Link href="/">
             <Image
-              src={logo}
+              src={typeof logo === "string" ? logo : logo.src}
               alt="MUN LOGO"
               className={"w-100"}
+              width={200}
+              height={100}
+              placeholder="empty"
             />
           </Link>
-        </div>
-        {windowWidth > 768 ? (
-          <ul className="hidden md:flex gap-20 lg:gap-10 m-5 p-5 items-center">
-            <Link href="/about">ABOUT</Link>
-            <Link href="/event">EVENT</Link>
-            <Link href='/speaker'>SPEAKER</Link>
-            <Link href="/issues">
+          <button
+            className="md:hidden" // Show only on smaller screens
+            onClick={toggleNavbar}
+          >
+            {/* Add an icon or text for the mobile nav toggle */}
+            Toggle Mobile Nav
+          </button>
+          <MobileNav isOpen={isOpen} toggleNavbar={toggleNavbar} />
+
+          <div className="flex items-center justify-center text-lg font-light font-roboto  lg:text-[24px] hidden md:flex space-x-8">
+            <Link href={"/about"} className="hover:scale-[1.14] pl-16 duration-300">
+              About
+            </Link>
+            <Link href={"/events"} className="hover:scale-[1.14] duration-300">
+              Events
+            </Link>
+            <Link href={"/speakers"} className="hover:scale-[1.14] duration-300">
+              Speakers
+            </Link>
+            <Link href="/issues" className="">
               <button className="rounded-full border-none ms-5 outline-none p-3" style={{ backgroundImage: `url(${contact.src})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
                 CONTACT US
               </button>
             </Link>
-          </ul>
-        ) : (
-          <div className="flex items-center">
-            <button className="rounded-full border-none outline-none" onClick={toggleMobileMenu}>
-              <FaBars />
-            </button>
           </div>
-        )}
-      </div>
-      {mobileMenuOpen && <MobileMenu closeMenu={closeMobileMenu} />}
-    </div>
+        </div>
+      </nav>
+    </>
   );
 };
 

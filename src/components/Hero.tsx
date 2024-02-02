@@ -25,7 +25,7 @@ const Hero = () => {
             <h1 className="p-5 font-sans text-4xl text-center w-full">
               Get Inside in The <br /> Philosopher’s Mind
             </h1>
-            <Link href="/issues">
+            <Link href="/register">
               <button
                 className="rounded-full border-none ms-5 outline-none p-3 font-sans w-fit px-20 font-semibold text-2xl m-5"
                 style={{
