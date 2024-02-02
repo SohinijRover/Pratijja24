@@ -2,6 +2,8 @@
 import React, { useState } from 'react';
 import Form1 from './form1';
 import Form2 from './form2';
+import Form3 from './form3';
+import Form4 from './form4';
 import Navbar from '@/components/Navbar';
 import contact from "/public/navbar/contact.png";
 const register: React.FC = () => {
@@ -14,9 +16,9 @@ const register: React.FC = () => {
       case 2:
         return <Form2 />;
       case 3:
-        return <Form1 />;
+        return <Form3 />;
       case 4:
-        return <Form1 />;
+        return <Form4 />;
       default:
         return null;
     }

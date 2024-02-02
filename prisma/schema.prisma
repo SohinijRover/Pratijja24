@@ -42,3 +42,22 @@ model form2 {
   accomodation     Boolean @default(false)
   message          String
 }
+
+model form3 {
+  id           String  @id @default(uuid())
+  name         String
+  email        String
+  contact      String
+  institution  String
+  accomodation Boolean @default(false)
+  message      String
+}
+
+model form4 {
+  id          String @id @default(uuid())
+  name        String
+  phone       String
+  email       String
+  institution String
+  speaking    String
+}
