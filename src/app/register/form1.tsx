@@ -4,9 +4,11 @@ import { Box, Button, Checkbox, FormControlLabel, TextField, Typography } from '
 import { toast } from 'sonner';
 import { debate_cross_teams } from '../schema/form_schema';
 import { toFormikValidationSchema } from 'zod-formik-adapter';
-
+import { useState } from 'react';
+import { PulseLoader } from "react-spinners";
 
 const MyForm = () => {
+const [loading, setLoading] = useState(false);
   return (
     <Formik
       initialValues={{
@@ -30,6 +32,7 @@ const MyForm = () => {
       onSubmit={async (values) => {
         console.log(values);
         try {
+        setLoading(true);
           const res = await fetch("/api/form1", {
             method: "POST",
             headers: {
@@ -40,11 +43,14 @@ const MyForm = () => {
           const data = await res.json();
           if (!data.success) {
             toast.error(data.message);
+            setLoading(false);
           } else {
             toast.success(data.message);
+            setLoading(false);
           }
         } catch (err) {
           toast.error("Unknown error Occurred");
+          setLoading(false);
         }
       }}
     >
@@ -279,15 +285,14 @@ const MyForm = () => {
             
           </Box>
           </div>
-
+        <div className='flex flex-col items-center justify-center'>
           {/* Additional Message */}
+          <div className="text-indigo-500 text-[25px] font-semibold text-center mb-2">Message</div>
           <Box mb="10px">
-            <Typography variant="body1" fontWeight={600}>
-              Message:
-            </Typography>
+            
             <Field
               as={TextField}
-              fullWidth
+              fullWidth 
               size="small"
               type="text"
               name="message"
@@ -296,11 +301,18 @@ const MyForm = () => {
             />
             
           </Box>
-
+          </div>
           {/* Submit Button */}
-          <Button sx={{ mb: '10px', py: '15px' }}  variant="contained" type="submit" color="info" fullWidth>
-            Submit
-          </Button>
+          <button
+                type="submit"
+                disabled={loading}
+                className={`${
+                  loading && "opacity-50 cursor-not-allowed"
+                } mx-auto mt-2 flex items-center gap-4 py-1 md:py-2 leading-none px-4 md:px-6 rounded-full bg-gradient-to-b from-[#174ACE] to-indigo-500 text-sm md:text-lg font-medium text-white pt-5 mb-10`}
+              >
+                <PulseLoader loading={loading} size={6} color="#fff" />
+                <p>Submit</p>
+              </button>
         </Form>
       )}
     </Formik>

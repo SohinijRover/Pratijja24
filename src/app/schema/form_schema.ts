@@ -41,11 +41,7 @@ export const debate_cross_teams = z
   }),
   institution_3:z.string({
     required_error:"Institution is Required"
-  }),
-  accomodation: z.boolean().default(false).refine(value => typeof value === "boolean", {
-    message: "Do you need help in finding Accomodation"
-  }),
-  message:z.string(),
+  })
 
 })
 
