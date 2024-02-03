@@ -1,7 +1,9 @@
 // Import necessary components from Formik and MUI
-import { Formik, Form, Field } from 'formik';
+import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { Box, Button, Checkbox, FormControlLabel, TextField, Typography } from '@mui/material';
 import { toast } from 'sonner';
+import { debate_cross_teams } from '../schema/form_schema';
+import { toFormikValidationSchema } from 'zod-formik-adapter';
 
 
 const MyForm = () => {
@@ -24,6 +26,7 @@ const MyForm = () => {
         accomodation: false,
         message: '',
       }}
+      validationSchema={toFormikValidationSchema(debate_cross_teams)}
       onSubmit={async (values) => {
         console.log(values);
         try {
@@ -47,10 +50,9 @@ const MyForm = () => {
     >
       {({ isSubmitting }) => (
         <Form>
-          <div className="flex flex-col items-center justify-center p-5-"><Box mb="10px">
-            <Typography variant="body1" fontWeight={600}>
-              Team Name:
-            </Typography>
+          <div className="flex flex-col items-center justify-center p-8-"><Box mb="10px">
+            
+          <div className="text-indigo-500 text-[25px] font-semibold text-center pb-3">Team Name</div>
             <Field
               as={TextField}
               fullWidth
@@ -58,14 +60,16 @@ const MyForm = () => {
               type="text"
               name="team_name"
               id="team_name"
-              className='bg-white rounded'
+              className='bg-slate-100 rounded-xl'
             />
+            <ErrorMessage name="team_name" component="div" className='text-sm text-center pt-2 text-red-600' />
           </Box>
-          <div className='flex items-center justify-center'>
+          <div className="text-indigo-500 text-[25px] font-semibold text-center">Speaker -1</div>
+          <div className='flex items-center justify-center gap-7'>
           {/* Speaker 1 */}
           <Box mb="10px">
-            <Typography variant="body1" fontWeight={600}>
-              Name of the Speaker 1:
+            <Typography variant="body1" fontWeight={600} className='text-center'>
+              Name
             </Typography>
             <Field
               as={TextField}
@@ -74,12 +78,13 @@ const MyForm = () => {
               type="text"
               name="speaker_1"
               id="speaker_1"
-              className='bg-white rounded'
+              className='bg-slate-100 rounded-xl'
             />
+            <ErrorMessage name="speaker_1" component="div" className='text-sm text-center pt-2 text-red-600' />
           </Box>
           <Box mb="10px">
-            <Typography variant="body1" fontWeight={600}>
-              Email of The Speaker 1:
+            <Typography variant="body1" fontWeight={600} className='text-center'>
+              Email
             </Typography>
             <Field
               as={TextField}
@@ -88,13 +93,13 @@ const MyForm = () => {
               type="email"
               name="email_1"
               id="email_1"
-              className='bg-white rounded'
+              className='bg-slate-100 rounded-xl'
             />
+            <ErrorMessage name="email_1" component="div" className='text-sm text-center pt-2 text-red-600'/>
           </Box>
-
           <Box mb="10px">
-            <Typography variant="body1" fontWeight={600}>
-              Contact of The Speaker 1:
+            <Typography variant="body1" fontWeight={600} className='text-center'>
+              Contact
             </Typography>
             <Field
               as={TextField}
@@ -103,12 +108,13 @@ const MyForm = () => {
               type="text"
               name="contact_1"
               id="contact_1"
-              className='bg-white rounded'
+              className='bg-slate-100 rounded-xl'
             />
+            <ErrorMessage name="contact_1" component="div" className='text-sm text-center pt-2 text-red-600' />
           </Box>
           <Box mb="10px">
-            <Typography variant="body1" fontWeight={600}>
-              Institution of The Speaker 1:
+            <Typography variant="body1" fontWeight={600} className='text-center'>
+              Institution
             </Typography>
             <Field
               as={TextField}
@@ -117,14 +123,16 @@ const MyForm = () => {
               type="text"
               name="institution_1"
               id="institution_1"
-              className='bg-white rounded'
+              className='bg-slate-100 rounded-xl'
             />
+            <ErrorMessage name="institution_1" component="div" className='text-sm text-center pt-2 text-red-600' />
           </Box>
           </div>
-          <div className='flex items-center justify-center'>
+          <div className="text-indigo-500 text-[25px] font-semibold text-center ">Speaker -2</div>
+          <div className='flex items-center justify-cente  gap-7'>
           <Box mb="10px">
-            <Typography variant="body1" fontWeight={600}>
-              Name of the Speaker 2:
+            <Typography variant="body1" fontWeight={600} className='text-center'>
+              Name
             </Typography>
             <Field
               as={TextField}
@@ -133,13 +141,13 @@ const MyForm = () => {
               type="text"
               name="speaker_2"
               id="speaker_2"
-              className='bg-white rounded'
+              className='bg-slate-100 rounded-xl'
             />
-
+            <ErrorMessage name="speaker_2" component="div" className='text-sm text-center pt-2 text-red-600'/>
           </Box>
           <Box mb="10px">
-            <Typography variant="body1" fontWeight={600}>
-              Email of The Speaker 2:
+            <Typography variant="body1" fontWeight={600} className='text-center'>
+              Email
             </Typography>
             <Field
               as={TextField}
@@ -148,14 +156,14 @@ const MyForm = () => {
               type="email"
               name="email_2"
               id="email_2"
-              className='bg-white rounded'
+              className='bg-slate-100 rounded-xl'
             />
-
+            <ErrorMessage name="email_2" component="div" className='text-sm text-center pt-2 text-red-600'/>
           </Box>
 
           <Box mb="10px">
-            <Typography variant="body1" fontWeight={600}>
-              Contact of The Speaker 2:
+            <Typography variant="body1" fontWeight={600} className='text-center'>
+              Contact
             </Typography>
             <Field
               as={TextField}
@@ -164,13 +172,13 @@ const MyForm = () => {
               type="text"
               name="contact_2"
               id="contact_2"
-              className='bg-white rounded'
+              className='bg-slate-100 rounded-xl'
             />
-
+            <ErrorMessage name="contact_2" component="div" className='text-sm text-center pt-2 text-red-600'/>
           </Box>
           <Box mb="10px">
-            <Typography variant="body1" fontWeight={600}>
-              Institution of The Speaker 2:
+            <Typography variant="body1" fontWeight={600} className='text-center'>
+              Institution
             </Typography>
             <Field
               as={TextField}
@@ -179,15 +187,16 @@ const MyForm = () => {
               type="text"
               name="institution_2"
               id="institution_2"
-              className='bg-white rounded'
+              className='bg-slate-100 rounded-xl'
             />
-
+            <ErrorMessage name="institution_2" component="div" className='text-sm text-center pt-2 text-red-600'/>
           </Box>
           </div>
-          <div className='flex items-start justify-center'>
+          <div className="text-indigo-500 text-[25px] font-semibold text-center">Speaker -3</div>
+          <div className='flex items-start justify-center gap-7'>
           <Box mb="10px">
-            <Typography variant="body1" fontWeight={600}>
-              Name of the Speaker 3:
+            <Typography variant="body1" fontWeight={600} className='text-center'>
+              Name
             </Typography>
             <Field
               as={TextField}
@@ -196,13 +205,13 @@ const MyForm = () => {
               type="text"
               name="speaker_3"
               id="speaker_3"
-              className='bg-white rounded'
+              className='bg-slate-100 rounded-xl'
             />
-            {/* Add validation messages here if needed */}
+            <ErrorMessage name="speaker_3" component="div" className='text-sm text-center pt-2 text-red-600'/>
           </Box>
           <Box mb="10px">
-            <Typography variant="body1" fontWeight={600}>
-              Email of The Speaker 3:
+            <Typography variant="body1" fontWeight={600} className='text-center'>
+              Email
             </Typography>
             <Field
               as={TextField}
@@ -211,14 +220,14 @@ const MyForm = () => {
               type="email"
               name="email_3"
               id="email_3"
-              className='bg-white rounded'
+              className='bg-slate-100 rounded-xl'
             />
-            {/* Add validation messages here if needed */}
+            <ErrorMessage name="email_3" component="div" className='text-sm text-center pt-2 text-red-600'/>
           </Box>
 
           <Box mb="10px">
-            <Typography variant="body1" fontWeight={600}>
-              Contact of The Speaker 3:
+            <Typography variant="body1" fontWeight={600} className='text-center'>
+              Contact
             </Typography>
             <Field
               as={TextField}
@@ -227,13 +236,13 @@ const MyForm = () => {
               type="text"
               name="contact_3"
               id="contact_3"
-              className='bg-white rounded'
+              className='bg-slate-100 rounded-xl'
             />
-            {/* Add validation messages here if needed */}
+            <ErrorMessage name="contact_3" component="div" className='text-sm text-center pt-2 text-red-600' />
           </Box>
           <Box mb="10px">
-            <Typography variant="body1" fontWeight={600}>
-              Institution of The Speaker 3:
+            <Typography variant="body1" fontWeight={600} className='text-center'>
+              Institution
             </Typography>
             <Field
               as={TextField}
@@ -242,29 +251,32 @@ const MyForm = () => {
               type="text"
               name="institution_3"
               id="institution_3"
-              className='bg-white rounded'
+              className='bg-slate-100 rounded-xl'
             />
-            {/* Add validation messages here if needed */}
+            <ErrorMessage name="institution_3" component="div" className='text-sm text-center pt-2 text-red-600'/>
           </Box>
           </div>
           </div>
 
-          {/* Repeat the above structure for other form fields */}
 
-          {/* Accommodation */}
-          <div className="flex items-center justify-center">
+          <div className="text-indigo-500 text-[25px] font-semibold text-center">Accomodation</div>
+          <div className="flex items-center justify-center pt-2 ms-6">
           <Box mb="10px">
             <FormControlLabel
+            className='bg-slate-100 rounded-xl text-black rounded-3xl pe-2'
               control={
                 <Field
                   as={Checkbox}
                   color="info"
                   type="checkbox"
                   name="accomodation"
+
                 />
               }
               label="Need Accommodation"
+              
             />
+            
           </Box>
           </div>
 
@@ -280,12 +292,13 @@ const MyForm = () => {
               type="text"
               name="message"
               id="message"
-              className='bg-white rounded'
+              className='bg-slate-100 rounded-xl'
             />
+            
           </Box>
 
           {/* Submit Button */}
-          <Button sx={{ mb: '10px', py: '15px' }} variant="contained" type="submit" color="info" fullWidth>
+          <Button sx={{ mb: '10px', py: '15px' }}  variant="contained" type="submit" color="info" fullWidth>
             Submit
           </Button>
         </Form>

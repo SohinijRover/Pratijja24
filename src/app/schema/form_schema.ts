@@ -42,7 +42,9 @@ export const debate_cross_teams = z
   institution_3:z.string({
     required_error:"Institution is Required"
   }),
-  accomodation:z.boolean().default(false),
+  accomodation: z.boolean().default(false).refine(value => typeof value === "boolean", {
+    message: "Do you need help in finding Accomodation"
+  }),
   message:z.string(),
 
 })
@@ -70,7 +72,7 @@ export const debate_institution_team = z
     contact_poc2:z.string({
       required_error:"Contact number of Point of Contact is required"
     }),
-    email_poc:z.string({
+    email_poc2:z.string({
       required_error:"Email of Point of Contact is required"
     }),
     slots: z.number().refine(value => [1, 2, 3, 4, 5].includes(value), {
