@@ -5,13 +5,13 @@ const Hero = () => {
   return (
     <>
       <div
-        className="h-screen flex"
+        className="h-screen flex flex-col md:flex-row"
         style={{
           background:
             "linear-gradient(180deg, rgba(80,78,123,1) 0%, rgba(80,78,123,0.5) 30%, rgba(80,78,123,0.5) 70%, rgba(80,78,123,1) 100%)",
         }}
       >
-        <div className="w-6/12">
+        <div className="flex-1">
           <TextElement
             date={"14"}
             month={"July, 2024"}
@@ -31,10 +31,12 @@ const Hero = () => {
             title={"KEYNOTE ADDRESS"}
           ></TextElement>
         </div>
-        <div className="w-6/12 flex flex-col justify-center content-center">
-          <Crousel thumb={[mic.src,mic.src,mic.src]} />
+        <div className="flex-1 md:h-screen md:w-6/12 flex justify-center items-center">
+          <Crousel thumb={[mic.src, mic.src, mic.src]} />
         </div>
       </div>
+
+
     </>
   );
 };

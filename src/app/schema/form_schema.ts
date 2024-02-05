@@ -54,22 +54,22 @@ export const debate_institution_team = z
       required_error:"Institution is required"
     }),
     name_poc1:z.string({
-      required_error:"Name of Point of Contact is required"
+      required_error:"Name is required"
     }),
     contact_poc1:z.string({
-      required_error:"Contact number of Point of Contact is required"
+      required_error:"Contact number is required"
     }),
     email_poc1:z.string({
-      required_error:"Email of Point of Contact is required"
+      required_error:"Email is required"
     }),
     name_poc2:z.string({
-      required_error:"Name of Point of Contact is required"
+      required_error:"Name is required"
     }),
     contact_poc2:z.string({
-      required_error:"Contact number of Point of Contact is required"
+      required_error:"Contact number required"
     }),
     email_poc2:z.string({
-      required_error:"Email of Point of Contact is required"
+      required_error:"Email is required"
     }),
     slots: z.number().refine(value => [1, 2, 3, 4, 5].includes(value), {
       message: "Number of slots must be 1, 2, 3, 4, or 5.",
@@ -77,8 +77,6 @@ export const debate_institution_team = z
     ajudicator_slots: z.number().refine(value => [1,2,3,4,5,6].includes(value),{
       message:"Number of Ajudicator Slots must ve 1,2,3,4,5,6. We follow the N=N+1 policy where N is the number of teams."
     }),
-    accomodation:z.boolean().default(false),
-    message:z.string(),
   })
 
   export const debate_institution_adjudicator = z
@@ -92,7 +90,7 @@ export const debate_institution_team = z
       })
       .email("Please Enter a Valid Email")
       ,
-      contact:z.number({
+      contact:z.string({
         required_error:"Contact number of Adjudicator is Required"
       }),
       institution:z.string({

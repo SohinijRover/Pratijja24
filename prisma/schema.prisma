@@ -24,7 +24,7 @@ model form1 {
   contact_3     String
   institution_3 String
   accomodation  Boolean @default(false)
-  message       String
+  message       String?
 }
 
 model form2 {
@@ -37,10 +37,10 @@ model form2 {
   name_poc2        String
   contact_poc2     String
   email_poc2       String
-  slots            String
-  ajudicator_slots String
+  slots            Int
+  ajudicator_slots Int
   accomodation     Boolean @default(false)
-  message          String
+  message          String?
 }
 
 model form3 {
@@ -50,7 +50,7 @@ model form3 {
   contact      String
   institution  String
   accomodation Boolean @default(false)
-  message      String
+  message      String?
 }
 
 model form4 {

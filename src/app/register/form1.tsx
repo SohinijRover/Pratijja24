@@ -56,8 +56,7 @@ const [loading, setLoading] = useState(false);
     >
       {({ isSubmitting }) => (
         <Form>
-          <div className="flex flex-col items-center justify-center p-8-"><Box mb="10px">
-            
+          <div className="flex flex-col items-center justify-center p-8"><Box mb="10px">
           <div className="text-indigo-500 text-[25px] font-semibold text-center pb-3">Team Name</div>
             <Field
               as={TextField}

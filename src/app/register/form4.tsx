@@ -76,7 +76,6 @@ const Form4 = () => {
               </Typography>
               <Field
                 as={TextField}
-                fullWidth
                 size="small"
                 type="email"
                 name="email"
@@ -92,7 +91,6 @@ const Form4 = () => {
               </Typography>
               <Field
                 as={TextField}
-                fullWidth
                 size="small"
                 type="text"
                 name="institution"
@@ -106,10 +104,9 @@ const Form4 = () => {
               <Typography variant="body1" fontWeight={600}>
                 Speaking:
               </Typography>
-              <div>Any credentials beyond 10 will be ignored. Please use the following format: Name of Tournament - Year - Format (ABD/BPD) - No. of Teams - Furthest Outround Reached (e.g. Champion, Open Quarterfinalist) - Speaker Achievement (e.g. 9th Best Speaker, Best Novice Speaker)</div>
+              <div>Any credentials beyond 10 will be ignored.<br /> Please use the following format:<br /> Name of Tournament - Year - Format (ABD/BPD) -<br /> No. of Teams - Furthest Outround Reached (e.g. Champion, Open Quarterfinalist) -<br /> Speaker Achievement (e.g. 9th Best Speaker, Best Novice Speaker)</div>
               <Field
                 as={TextField}
-                fullWidth
                 size="small"
                 type="text"
                 name="speaking"
