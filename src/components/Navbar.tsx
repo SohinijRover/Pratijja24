@@ -1,118 +1,92 @@
-"use client"
-import { useState, useEffect } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+"use client";
+import { usePathname } from "next/navigation";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import logo from "/public/pratijja.png";
+import MobileNav from "./MobileNav";
+import logo from "/public/navbar/pratijjalogo.png";
 import contact from "/public/navbar/contact.png";
 
-interface MobileMenuProps {
-  closeMenu: () => void;
-}
-
-const MobileMenu: React.FC<MobileMenuProps> = ({ closeMenu }) => {
-  return (
-    <div className="fixed top-0 right-0 bottom-0 left-0 bg-black bg-opacity-80 z-50">
-      <div className="flex justify-end p-5 h-[150px]">
-        <button className="text-white" onClick={closeMenu}>
-          <FaTimes />
-        </button>
-      </div>
-      <ul className="flex flex-col items-center h-full gap-10 items-center justify-center text-2xl">
-        <li>
-          <Link href="/about" onClick={closeMenu}>
-            ABOUT
-          </Link>
-        </li>
-        <li>
-          <Link href="/event" onClick={closeMenu}>
-            EVENT
-          </Link>
-        </li>
-        <li>
-          <Link href="/speaker" onClick={closeMenu}>
-            SPEAKER
-          </Link>
-        </li>
-        <li>
-          <Link href="/issues" onClick={closeMenu}>
-            CONTACT US
-          </Link>
-        </li>
-      </ul>
-    </div>
-  );
-};
 const Navbar = () => {
-  const [navbar, setNavbar] = useState(false);
-  const [windowWidth, setWindowWidth] = useState(0);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
-  const changeBackground = () => {
-    if (window.scrollY >= 100) {
-      setNavbar(true);
-    } else {
-      setNavbar(false);
-    }
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleNavbar = () => {
+    setIsOpen(!isOpen);
   };
-
-  const handleResize = () => {
-    setWindowWidth(window.innerWidth);
-  };
+  const [showBackground, setShowBackground] = useState(false);
 
   useEffect(() => {
-    changeBackground();
-    window.addEventListener("scroll", changeBackground);
-    window.addEventListener("resize", handleResize);
-    setWindowWidth(window.innerWidth);
+    const handleScroll = () => {
+      if (window.scrollY >= 20) {
+        setShowBackground(true);
+      } else setShowBackground(false);
+    };
+
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener("scroll", changeBackground);
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
-  const toggleMobileMenu = () => {
-    setMobileMenuOpen(!mobileMenuOpen);
-  };
-
-  const closeMobileMenu = () => {
-    setMobileMenuOpen(false);
-  };
-
   return (
-    <div className={`w-screen transition duration-300 mr-12 ease-in-out fixed z-40 ${navbar ? 'top-0 bg-navBg/80 backdrop-blur-xl ' : ''} left-0 right-0`}>
-      <div className={`flex mx-auto pr-8 px-4 2xl:px-0 ${navbar ? 'py-2' : 'py-2'} max-w-7xl justify-between items-center`}>
-        <div>
-          <Link href='/'>
-            <Image
-              src={logo}
-              alt="MUN LOGO"
-              className={"w-100"}
-            />
-          </Link>
-        </div>
-        {windowWidth > 768 ? (
-          <ul className="hidden md:flex gap-20 lg:gap-10 m-5 p-5 items-center">
-            <Link href="/about">ABOUT</Link>
-            <Link href="/event">EVENT</Link>
-            <Link href='/speaker'>SPEAKER</Link>
-            <Link href="/issues">
-              <button className="rounded-full border-none ms-5 outline-none p-3" style={{ backgroundImage: `url(${contact.src})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
-                CONTACT US
+    <>
+      <MobileNav isOpen={isOpen} toggleNavbar={toggleNavbar} />
+      <nav
+        className={` ${
+          showBackground && "backdrop-blur-[80px]"
+        } top-0  fixed  z-[50] left-0 right-0  `}
+      >
+        <div
+          className={`flex max-w-[1900px]    mx-auto justify-between w-full  p-4  lg:px-20 py-2 rounded-sm items-center text-white`}
+        >
+          <div>
+            {!isOpen && ( 
+              <Link href={"/"}>
+              <Image
+                src={logo}
+                alt="kiit logo"
+                width={100}
+                height={100}
+                quality={50}
+                className="w-60 lg:w-100 lg:h-100 sm:w-30 sm:h-30"
+              />
+              </Link>
+            )}
+          </div>
+          <div className="hidden sm:flex justify-between items-center  text-xl space-x-4 p-4 ">
+            <Link href={"/"} className={`hover:scale-[1.14] pl-16 duration-300 ${pathname === "/" && "text-indigo-500"}`}>
+              Home
+            </Link>
+            <Link href={"/speakers"} className={`hover:scale-[1.14] duration-300 ${pathname === "/events" && "text-indigo-500"}`}>
+              Speakers
+            </Link>
+            <Link href={"/about"} className={`hover:scale-[1.14] duration-300 ${pathname === "/about" && "text-indigo-500"}`}>
+              About
+            </Link>
+            <Link href={"/members"} className={`hover:scale-[1.14] duration-300 ${pathname === "/members" && "text-indigo-500"}`}>
+              Members
+            </Link>
+            <Link href="/contactus">
+              <button className={`rounded-full border-none outline-none p-3 hover:scale-[1.14] duration-300 ${pathname === "/contactus" && "text-indigo-500"}`} style={{ backgroundImage: `url(${contact.src})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
+                Contact Us
               </button>
             </Link>
-          </ul>
-        ) : (
-          <div className="flex items-center">
-            <button className="rounded-full border-none outline-none" onClick={toggleMobileMenu}>
-              <FaBars />
+            
+            </div>
+            
+            <button className=" sm:hidden" onClick={toggleNavbar}>
+              <Image
+                src="/mobiilenav.svg"
+                alt="mb"
+                width={28}
+                height={9}
+              ></Image>
             </button>
           </div>
-        )}
-      </div>
-      {mobileMenuOpen && <MobileMenu closeMenu={closeMobileMenu} />}
-    </div>
+      </nav>
+    </>
   );
 };
 

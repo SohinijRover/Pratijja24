@@ -7,24 +7,24 @@ import { toFormikValidationSchema } from 'zod-formik-adapter';
 import { useState } from 'react';
 import { PulseLoader } from "react-spinners";
 
-const MyForm = () => {
+const form2 = () => {
   const [loading, setLoading] = useState(false);
   return (
     <Formik
-      initialValues={{
-        email: '',
-        institution: '',
-        name_poc1: '',
-        contact_poc1: '',
-        email_poc1: '',
-        name_poc2: '',
-        contact_poc2: '',
-        email_poc2: '',
-        slots: 1,
-        ajudicator_slots: 1,
-        accomodation: false,
-        message: '',
-      }}
+    initialValues={{
+      email: '',
+      institution: '',
+      name_poc1: '',
+      contact_poc1: '',
+      email_poc1: '',
+      name_poc2: '',
+      contact_poc2: '',
+      email_poc2: '',
+      slots: '1',
+      ajudicator_slots: '1',
+      accomodation: false,
+      message: '',
+    }}
       validationSchema={toFormikValidationSchema(debate_institution_team)}
       onSubmit={async (values) => {
         console.log(values);
@@ -51,7 +51,7 @@ const MyForm = () => {
         }
       }}
     >
-      {({ isSubmitting,values, handleChange }) => (
+      {({ isSubmitting,values,handleChange }) => (
         <Form>
         <div className="flex flex-col items-center justify-center p-5-">
           <div className='flex items-center justify-center gap-7'>
@@ -276,15 +276,14 @@ const MyForm = () => {
 
           {/* Submit Button */}
           <button
-              type="submit"
-              disabled={loading}
-              className={`${
-                loading && "opacity-50 cursor-not-allowed"
-              } mx-auto mt-2 flex items-center gap-4 py-1 md:py-2 leading-none px-4 md:px-6 rounded-full bg-gradient-to-b from-[#174ACE] to-indigo-500 text-sm md:text-lg font-medium text-white pt-5 mb-10`}
-            >
-              <PulseLoader loading={loading} size={6} color="#fff" />
-              <p>Submit</p>
-          </button>
+          type="submit"
+          disabled={loading}
+          className={`${loading && "opacity-50 cursor-not-allowed"
+            } mx-auto mt-2 flex items-center gap-4 py-1 md:py-2 leading-none px-4 md:px-6 rounded-full bg-gradient-to-b from-[#174ACE] to-indigo-500 text-sm md:text-lg font-medium text-white pt-5 mb-10`}
+        >
+          <PulseLoader loading={loading} size={6} color="#fff" />
+          <p>Submit</p>
+        </button>
         </div>
       </Form>
       )}
@@ -292,4 +291,4 @@ const MyForm = () => {
   );
 };
 
-export default MyForm;
+export default form2;

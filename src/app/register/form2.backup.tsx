@@ -1,3 +1,4 @@
+// Import necessary components from Formik and MUI
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { Box, Button, Checkbox, FormControlLabel, RadioGroup, TextField, Typography, Radio } from '@mui/material';
 import { toast } from 'sonner';
@@ -6,7 +7,7 @@ import { toFormikValidationSchema } from 'zod-formik-adapter';
 import { useState } from 'react';
 import { PulseLoader } from "react-spinners";
 
-const Form2 = () => {
+const form2 = () => {
   const [loading, setLoading] = useState(false);
   return (
     <Formik
@@ -19,23 +20,27 @@ const Form2 = () => {
         name_poc2: '',
         contact_poc2: '',
         email_poc2: '',
-        slots: 1,
-        ajudicator_slots: 1,
+        slots: '1',
+        ajudicator_slots: '1',
         accomodation: false,
         message: '',
       }}
       validationSchema={toFormikValidationSchema(debate_institution_team)}
-      onSubmit={async (values, { setSubmitting }) => {
+      onSubmit={async (values) => {
         console.log(values);
         try {
           setLoading(true);
           const res = await fetch("/api/form2", {
-            method: "POST",
             headers: {
               "Content-Type": "application/json",
             },
             body: JSON.stringify(values),
           });
+      
+          if (!res.ok) {
+            throw new Error(`HTTP error! Status: ${res.status}`);
+          }
+      
           const data = await res.json();
           if (!data.success) {
             toast.error(data.message);
@@ -46,10 +51,9 @@ const Form2 = () => {
           toast.error("Unknown error occurred");
         } finally {
           setLoading(false);
-          setSubmitting(false); // Set submitting to false manually
         }
       }}
-      >      
+    >
       {({ isSubmitting, values, handleChange }) => (
         <Form>
           <div className="flex flex-col items-center justify-center p-5-">
@@ -275,15 +279,14 @@ const Form2 = () => {
 
             {/* Submit Button */}
             <button
-                type="submit"
-                disabled={loading}
-                className={`${
-                  loading && "opacity-50 cursor-not-allowed"
-                } mx-auto mt-2 flex items-center gap-4 py-1 md:py-2 leading-none px-4 md:px-6 rounded-full bg-gradient-to-b from-[#174ACE] to-indigo-500 text-sm md:text-lg font-medium text-white pt-5 mb-10`}
-              >
-                <PulseLoader loading={loading} size={6} color="#fff" />
-                <p>Submit</p>
-            </button>
+            type="submit"
+            disabled={loading}
+            className={`${loading && "opacity-50 cursor-not-allowed"
+              } mx-auto mt-2 flex items-center gap-4 py-1 md:py-2 leading-none px-4 md:px-6 rounded-full bg-gradient-to-b from-[#174ACE] to-indigo-500 text-sm md:text-lg font-medium text-white pt-5 mb-10`}
+          >
+            <PulseLoader loading={loading} size={6} color="#fff" />
+            <p>Submit</p>
+          </button>
           </div>
         </Form>
       )}
@@ -291,4 +294,4 @@ const Form2 = () => {
   );
 };
 
-export default Form2;
+export default form2;

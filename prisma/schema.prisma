@@ -37,8 +37,8 @@ model form2 {
   name_poc2        String
   contact_poc2     String
   email_poc2       String
-  slots            Int
-  ajudicator_slots Int
+  slots            String
+  ajudicator_slots String
   accomodation     Boolean @default(false)
   message          String?
 }
