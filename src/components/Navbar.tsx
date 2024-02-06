@@ -42,7 +42,7 @@ const Navbar = () => {
           className={`flex max-w-[1900px]    mx-auto justify-between w-full  p-4  lg:px-20 py-2 rounded-sm items-center text-white`}
         >
           <div>
-            {!isOpen && ( 
+            {!isOpen && (
               <Link href={"/"}>
               <Image
                 src={logo}
@@ -50,7 +50,7 @@ const Navbar = () => {
                 width={100}
                 height={100}
                 quality={50}
-                className="w-60 lg:w-100 lg:h-100 sm:w-30 sm:h-30"
+                className="w-40 lg:w-100 lg:h-100 sm:w-30 sm:h-30 m-4 pt-3"
               />
               </Link>
             )}
@@ -73,7 +73,7 @@ const Navbar = () => {
                 Contact Us
               </button>
             </Link>
-            
+
             </div>
             
             <button className=" sm:hidden" onClick={toggleNavbar}>
