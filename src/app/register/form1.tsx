@@ -81,7 +81,7 @@ function form1() {
                     placeholder="Team Name"
                     required
                     {...field}
-                    className="max-w-2xl mx-auto rounded-md"
+                    className="max-w-2xl mx-auto rounded-md bg-white"
                   />
                 </FormControl>
               </FormItem>
