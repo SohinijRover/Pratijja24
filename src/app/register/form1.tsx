@@ -81,7 +81,7 @@ function form1() {
                     placeholder="Team Name"
                     required
                     {...field}
-                    className="max-w-2xl mx-auto"
+                    className="max-w-2xl mx-auto rounded-md"
                   />
                 </FormControl>
               </FormItem>
@@ -322,12 +322,13 @@ function form1() {
                       disabled={isPending}
                       {...field}
                       value={String(field.value)}
+                      className="w-6 h-6"
                     />
                   </FormControl>
                 </FormItem>
               )}
             />
-            <span>Need accomodation ?</span>
+            <span className="text-xl">Need accomodation ?</span>
           </div>
           <div className="text-indigo-500 text-[25px] font-semibold text-center uppercase">
             Message

@@ -55,25 +55,25 @@ const register: React.FC = () => {
       <div className="w-full min-h-screen">
         <div className="pt-32 flex flex-col md:flex-row justify-center gap-4 pb-12">
           <button
-            className="rounded-full border-none ms-5 outline-none p-3 bg-gradient-to-t from-[#7972C2] to-[#c4c0f0]"
+            className="rounded-full border-none mx-4 outline-none p-3 bg-gradient-to-t from-[#0c0a1e] to-[#6056d2]"
             onClick={() => setActiveForm(1)}
           >
             Cross Teams Registeration
           </button>
           <button
-            className="rounded-full border-none ms-5 outline-none p-3 bg-gradient-to-t from-[#7972C2] to-[#c4c0f0]"
+            className="rounded-full border-none mx-4 outline-none p-3 bg-gradient-to-t from-[#0c0a1e] to-[#6056d2]"
             onClick={() => setActiveForm(2)}
           >
             Institutional Teams Registration
           </button>
           <button
-            className="rounded-full border-none ms-5 outline-none p-3 bg-gradient-to-t from-[#7972C2] to-[#c4c0f0]"
+            className="rounded-full border-none mx-4 outline-none p-3 bg-gradient-to-t from-[#0c0a1e] to-[#6056d2]"
             onClick={() => setActiveForm(3)}
           >
             Independent Adjudicator Registration
           </button>
           <button
-            className="rounded-full border-none ms-5 outline-none p-3 bg-gradient-to-t from-[#7972C2] to-[#c4c0f0]"
+            className="rounded-full border-none mx-4 outline-none p-3 bg-gradient-to-t from-[#0c0a1e] to-[#6056d2]"
             onClick={() => setActiveForm(4)}
           >
             IA/SA Application
