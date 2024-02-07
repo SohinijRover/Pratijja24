@@ -18,7 +18,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY >= 20) {
+      if (window.scrollY >= 10) {
         setShowBackground(true);
       } else setShowBackground(false);
     };
@@ -67,6 +67,9 @@ const Navbar = () => {
             </Link>
             <Link href={"/members"} className={`hover:scale-[1.14] duration-300 ${pathname === "/members" && "text-indigo-500"}`}>
               Members
+            </Link>
+            <Link href={"/register"} className={`hover:scale-[1.14] duration-300 ${pathname === "/register" && "text-indigo-500"}`}>
+              Register
             </Link>
             <Link href="/contactus">
               <button className={`rounded-full border-none outline-none p-3 hover:scale-[1.14] duration-300 ${pathname === "/contactus" && "text-indigo-500"}`} style={{ backgroundImage: `url(${contact.src})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>

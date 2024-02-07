@@ -73,15 +73,6 @@ export const debate_institution_team = z
     email_poc2:z.string({
       required_error:"Email is required"
     }),
-    slots: z.number().refine(value => [1, 2, 3, 4, 5].includes(value), {
-      message: "Number of slots must be 1, 2, 3, 4, or 5.",
-    }),
-    ajudicator_slots: z.number().refine(value => [1,2,3,4,5,6].includes(value),{
-      message:"Number of Ajudicator Slots must ve 1,2,3,4,5,6. We follow the N=N+1 policy where N is the number of teams."
-    }),
-    accomodation:z.boolean().default(false).refine(value=>"boolean",{
-        message:"Do you need help in finding Accomodation"
-      }),
   })
 
   export const debate_institution_adjudicator = z
