@@ -17,7 +17,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ isOpen, toggleNavbar }) => {
       onClick={toggleNavbar}
     >
       <div
-        className="fixed text-white flex flex-col  text-xl font-light font-roboto justify-between bg-gradient-to-r from-[#110D26] via-[#181146] to-[#110D26]  h-full w-[55vw] p-4 shadow-md top-0 left-0"
+        className="fixed text-white flex flex-col  text-xl font-light font-roboto justify-between bg-gradient-to-r from-[#110D26] via-[#66179e] to-[#110D26]  h-full w-[55vw] p-4 shadow-md top-0 left-0"
         onClick={(e) => e.stopPropagation()}
       >
         <ul className="p-2 text-3xl flex flex-col items-start justify-center space-y-6">

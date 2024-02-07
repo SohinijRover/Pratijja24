@@ -1,8 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-
-import { TfiWorld } from "react-icons/tfi";
 import mic from "/public/hero/mic.png";
 import coming from "/public/hero/coming.png";
 import Timer from "@/components/Timer";
@@ -12,7 +10,7 @@ const Hero = () => {
   return (
     <>
       <div className="h-screen font-sans flex flex-col md:flex-row items-center justify-center bg-gradient-to-t from-page-purple from-0% to-transparent to-20% max-h-[100vh]">
-        <div className="text-center p-10 sm:mt-10 md:w-1/3">
+        <div className="text-center p-10  md:w-1/3">
           <h1 className="font-sans text-3xl sm:text-3xl">
             Get Inside in The <br /> Philosopher’s Mind
           </h1>

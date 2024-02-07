@@ -18,7 +18,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY >= 20) {
+      if (window.scrollY >= 10) {
         setShowBackground(true);
       } else setShowBackground(false);
     };
