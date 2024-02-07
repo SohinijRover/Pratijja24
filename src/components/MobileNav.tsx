@@ -43,14 +43,17 @@ const MobileNav: React.FC<MobileNavProps> = ({ isOpen, toggleNavbar }) => {
             {" "}
             <Link href={"/about"}>About </Link>
           </li>
-
-          <li className="hover:pl-2 duration-200">
-            {" "}
-            <Link href={"/events"}>Events </Link>
-          </li>
           <li className="hover:pl-2 duration-200">
             {" "}
             <Link href={"/speakers"}>Speakers </Link>
+          </li>
+          <li className="hover:pl-2 duration-200">
+            {" "}
+            <Link href={"/members"}>Members </Link>
+          </li>
+          <li className="hover:pl-2 duration-200">
+            {" "}
+            <Link href={"/register"}>Register </Link>
           </li>
           <li className="hover:pl-2 duration-200">
             {" "}
