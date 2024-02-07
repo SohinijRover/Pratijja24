@@ -14,9 +14,12 @@ import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 import { z } from "zod";
 import { debate_cross_teams } from "../schema/form_schema";
+import { useState } from 'react';
+import { PulseLoader } from "react-spinners";
 
 function form1() {
   const [isPending, startTransition] = useTransition();
+  const [loading, setLoading] = useState(false);
 
   const form = useForm<z.infer<typeof debate_cross_teams>>({
     defaultValues: {
@@ -42,6 +45,7 @@ function form1() {
     startTransition(async () => {
       console.log(values);
       try {
+        setLoading(true);
         const res = await fetch("/api/form1", {
           method: "POST",
           headers: {
@@ -52,11 +56,14 @@ function form1() {
         const data = await res.json();
         if (!data.success) {
           toast.error(data.message);
+          setLoading(false);
         } else {
           toast.success(data.message);
+          setLoading(false);
         }
       } catch (err) {
         toast.error("Unknown error Occurred");
+        setLoading(false);
       }
       form.reset();
     });
@@ -81,7 +88,7 @@ function form1() {
                     placeholder="Team Name"
                     required
                     {...field}
-                    className="max-w-2xl mx-auto rounded-md bg-white"
+                    className="max-w-2xl mx-auto rounded-md bg-white text-black"
                   />
                 </FormControl>
               </FormItem>
@@ -90,7 +97,7 @@ function form1() {
           <div className="text-indigo-500 text-[25px] font-semibold text-center uppercase">
             Speaker - 1
           </div>
-          <div className="flex flex-col sm:flex-row gap-4 w-full pb-12">
+          <div className="flex flex-col sm:flex-row gap-4 w-full pb-12 text-black">
             <FormField
               control={form.control}
               name="speaker_1"
@@ -160,10 +167,10 @@ function form1() {
               )}
             />
           </div>
-          <div className="text-indigo-500 text-[25px] font-semibold text-center uppercase">
+          <div className="text-indigo-500 text-[25px] font-semibold text-center uppercase ">
             Speaker - 2
           </div>
-          <div className="flex flex-col sm:flex-row gap-4 w-full pb-12">
+          <div className="flex flex-col sm:flex-row gap-4 w-full pb-12 text-black">
             <FormField
               control={form.control}
               name="speaker_2"
@@ -236,7 +243,7 @@ function form1() {
           <div className="text-indigo-500 text-[25px] font-semibold text-center uppercase">
             Speaker - 3
           </div>
-          <div className="flex flex-col sm:flex-row gap-4 w-full pb-12">
+          <div className="flex flex-col sm:flex-row gap-4 w-full pb-12 text-black">
             <FormField
               control={form.control}
               name="speaker_3"
@@ -343,20 +350,22 @@ function form1() {
                     placeholder="Anything else you would like us to know ?"
                     disabled={isPending}
                     {...field}
-                    className="max-w-2xl mx-auto"
+                    className="max-w-2xl mx-auto text-black"
                   />
                 </FormControl>
               </FormItem>
             )}
           />
           <div className="flex justify-center">
-            <Button
-              disabled={isPending}
+          <button
               type="submit"
-              className="w-full max-w-2xl mx-auto bg-blue-700 hover:bg-blue-600 transition-colors duration-300"
+              disabled={loading}
+              className={`${loading && "opacity-50 cursor-not-allowed"
+                } mx-auto mt-2 flex items-center gap-4 py-1 md:py-2 leading-none px-4 md:px-6 rounded-full bg-gradient-to-b from-[#174ACE] to-indigo-500 text-sm md:text-lg font-medium text-white pt-5 mb-10`}
             >
-              Submit
-            </Button>
+              <PulseLoader loading={loading} size={6} color="#fff" />
+              <p>Submit</p>
+            </button>
           </div>
         </div>
       </form>
