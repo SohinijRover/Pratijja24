@@ -1,49 +1,51 @@
-import z from "zod";
 import validator from 'validator';
+import z from "zod";
 
-export const debate_cross_teams = z
-.object({
-  team_name:z.string({
-    required_error:"Name is Required"
+export const debate_cross_teams = z.object({
+  team_name: z.string({
+    required_error: "Name is Required"
   }),
-  speaker_1:z.string({
-    required_error:"Speaker name is requried"
+  speaker_1: z.string({
+    required_error: "Speaker name is required"
   }),
-  email_1:z.string({
-    required_error:"Email is Required"
+  email_1: z.string({
+    required_error: "Email is Required"
   }),
-  contact_1:z.string({
-    required_error:"Phone number is Required"
+  contact_1: z.string({
+    required_error: "Phone number is Required"
   }),
-  institution_1:z.string({
-    required_error:"Institution is Required"
+  institution_1: z.string({
+    required_error: "Institution is Required"
   }),
-  speaker_2:z.string({
-    required_error:"Speaker name is requried"
+  speaker_2: z.string({
+    required_error: "Speaker name is required"
   }),
-  email_2:z.string({
-    required_error:"Email is Required"
+  email_2: z.string({
+    required_error: "Email is Required"
   }),
-  contact_2:z.string({
-    required_error:"Phone number is Required"
+  contact_2: z.string({
+    required_error: "Phone number is Required"
   }),
-  institution_2:z.string({
-    required_error:"Institution is Required"
+  institution_2: z.string({
+    required_error: "Institution is Required"
   }),
-  speaker_3:z.string({
-    required_error:"Speaker name is requried"
+  speaker_3: z.string({
+    required_error: "Speaker name is required"
   }),
-  email_3:z.string({
-    required_error:"Email is Required"
+  email_3: z.string({
+    required_error: "Email is Required"
   }),
-  contact_3:z.string({
-    required_error:"Phone number is Required"
+  contact_3: z.string({
+    required_error: "Phone number is Required"
   }),
-  institution_3:z.string({
-    required_error:"Institution is Required"
-  })
-
-})
+  institution_3: z.string({
+    required_error: "Institution is Required"
+  }),
+  accomodation: z.boolean().default(false).refine(value => typeof value === "boolean", {
+    message: "Do you need help in finding Accommodation"
+  }),
+  message: z.string()
+});
 
 export const debate_institution_team = z
   .object({
@@ -77,6 +79,9 @@ export const debate_institution_team = z
     ajudicator_slots: z.number().refine(value => [1,2,3,4,5,6].includes(value),{
       message:"Number of Ajudicator Slots must ve 1,2,3,4,5,6. We follow the N=N+1 policy where N is the number of teams."
     }),
+    accomodation:z.boolean().default(false).refine(value=>"boolean",{
+        message:"Do you need help in finding Accomodation"
+      }),
   })
 
   export const debate_institution_adjudicator = z
