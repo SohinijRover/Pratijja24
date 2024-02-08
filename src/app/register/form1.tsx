@@ -18,7 +18,6 @@ import { useState } from 'react';
 import { PulseLoader } from "react-spinners";
 
 function form1() {
-  const [isPending, startTransition] = useTransition();
   const [loading, setLoading] = useState(false);
 
   const form = useForm<z.infer<typeof debate_cross_teams>>({
@@ -41,32 +40,29 @@ function form1() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof debate_cross_teams>) {
-    startTransition(async () => {
-      console.log(values);
-      try {
-        setLoading(true);
-        const res = await fetch("/api/form1", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(values),
-        });
-        const data = await res.json();
-        if (!data.success) {
-          toast.error(data.message);
-          setLoading(false);
-        } else {
-          toast.success(data.message);
-          setLoading(false);
-        }
-      } catch (err) {
-        toast.error("Unknown error Occurred");
-        setLoading(false);
+  async function onSubmit(values: z.infer<typeof debate_cross_teams>) {
+    console.log(values);
+    try {
+      setLoading(true);
+      const res = await fetch("/api/form1", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+      const data = await res.json();
+      if (!data.success) {
+        toast.error(data.message);
+      } else {
+        toast.success(data.message);
       }
-      form.reset();
-    });
+    } catch (err) {
+      console.error(err); 
+      toast.error("Unknown error occurred");
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (
@@ -84,7 +80,7 @@ function form1() {
                 <FormControl>
                   <Input
                     type="text"
-                    disabled={isPending}
+                    
                     placeholder="Team Name"
                     required
                     {...field}
@@ -106,7 +102,7 @@ function form1() {
                   <FormControl>
                     <Input
                       type="name"
-                      disabled={isPending}
+                      
                       required
                       placeholder="Name"
                       {...field}
@@ -123,7 +119,7 @@ function form1() {
                   <FormControl>
                     <Input
                       type="email"
-                      disabled={isPending}
+                      
                       placeholder="Email"
                       required
                       {...field}
@@ -141,7 +137,7 @@ function form1() {
                     <Input
                       type="text"
                       required
-                      disabled={isPending}
+                      
                       placeholder="Contact"
                       {...field}
                     />
@@ -158,7 +154,7 @@ function form1() {
                     <Input
                       required
                       type="text"
-                      disabled={isPending}
+                      
                       placeholder="Institution"
                       {...field}
                     />
@@ -180,7 +176,7 @@ function form1() {
                     <Input
                       required
                       type="name"
-                      disabled={isPending}
+                      
                       placeholder="Name"
                       {...field}
                     />
@@ -197,7 +193,7 @@ function form1() {
                     <Input
                       required
                       type="email"
-                      disabled={isPending}
+                      
                       placeholder="Email"
                       {...field}
                     />
@@ -214,7 +210,7 @@ function form1() {
                     <Input
                       type="text"
                       required
-                      disabled={isPending}
+                      
                       placeholder="Contact"
                       {...field}
                     />
@@ -231,7 +227,7 @@ function form1() {
                     <Input
                       type="text"
                       required
-                      disabled={isPending}
+                      
                       placeholder="Institution"
                       {...field}
                     />
@@ -253,7 +249,7 @@ function form1() {
                     <Input
                       required
                       type="name"
-                      disabled={isPending}
+                      
                       placeholder="Name"
                       {...field}
                     />
@@ -270,7 +266,7 @@ function form1() {
                     <Input
                       type="email"
                       required
-                      disabled={isPending}
+                      
                       placeholder="Email"
                       {...field}
                     />
@@ -287,7 +283,7 @@ function form1() {
                     <Input
                       type="text"
                       required
-                      disabled={isPending}
+                      
                       placeholder="Contact"
                       {...field}
                     />
@@ -304,7 +300,7 @@ function form1() {
                     <Input
                       type="text"
                       required
-                      disabled={isPending}
+                      
                       placeholder="Institution"
                       {...field}
                     />
@@ -326,7 +322,7 @@ function form1() {
                     <Input
                       type="checkbox"
                       required
-                      disabled={isPending}
+                      
                       {...field}
                       value={String(field.value)}
                       className="w-6 h-6"
@@ -348,7 +344,7 @@ function form1() {
                 <FormControl>
                   <Textarea
                     placeholder="Anything else you would like us to know ?"
-                    disabled={isPending}
+                    
                     {...field}
                     className="max-w-2xl mx-auto text-black"
                   />
@@ -357,7 +353,7 @@ function form1() {
             )}
           />
           <div className="flex justify-center">
-          <button
+            <button
               type="submit"
               disabled={loading}
               className={`${loading && "opacity-50 cursor-not-allowed"
