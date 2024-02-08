@@ -49,7 +49,11 @@ function Form2() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(values),
+        body: JSON.stringify({
+          ...values,
+          slots: selectedSlots.toString(), // Convert to string if necessary
+          ajudicator_slots: selectedAjudicatorSlots.toString(), // Convert to string if necessary
+        }),
       });
       const data = await res.json();
       if (!data.success) {
