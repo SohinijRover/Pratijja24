@@ -125,5 +125,8 @@ export const ia_sa = z
     }),
     speaking: z.string({
       required_error: ""
+    }).max(10),
+    judging: z.string({
+      required_error: ""
     }).max(10)
   });

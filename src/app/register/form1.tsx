@@ -321,7 +321,7 @@ function form1() {
                   <FormControl>
                     <Input
                       type="checkbox"
-                      required
+                      
                       
                       {...field}
                       value={String(field.value)}

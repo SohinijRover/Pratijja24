@@ -123,7 +123,6 @@ function Form2() {
                   <FormControl>
                     <Input
                       type="name"
-
                       required
                       placeholder="Name"
                       {...field}
@@ -296,7 +295,7 @@ function Form2() {
                   <FormControl>
                     <Input
                       type="checkbox"
-                      required
+                      
 
                       {...field}
                       value={String(field.value)}
