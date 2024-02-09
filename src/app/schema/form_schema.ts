@@ -115,6 +115,7 @@ export const ia_sa = z
       .refine(value => typeof value === 'string' && validator.isMobilePhone(value), {
         message: "Please Enter a Valid Phone number"
       }),
+      contact: z.string(), 
     email: z.string({
       required_error: "Email is Required",
     })
