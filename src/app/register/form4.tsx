@@ -31,7 +31,7 @@ function form3() {
     },
   });
 
-  async function onSubmit(values: z.infer<typeof debate_institution_adjudicator>) {
+  async function onSubmit(values: z.infer<typeof ia_sa>) {
     console.log(values);
     try {
       setLoading(true);
