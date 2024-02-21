@@ -5,6 +5,7 @@ import AboutKiiT from '@/components/about/AboutKiiT'
 import AboutFounder from '@/components/about/AboutFounder'
 
 import "../../components/css/about.css"
+import Footer from '@/components/Footer'
 
 export default function page() {
     return (
@@ -18,6 +19,7 @@ export default function page() {
             <AboutPratijja />
             <AboutKiiT />
             <AboutFounder />
+            <Footer />
         </>
     )
 }

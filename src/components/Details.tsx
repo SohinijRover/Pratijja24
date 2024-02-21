@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <>
       <div
-        className="h-screen flex flex-col md:flex-row"
+        className="h-100 flex flex-col md:flex-row"
         style={{
           background:
             "linear-gradient(180deg, rgba(80,78,123,1) 0%, rgba(80,78,123,0.5) 30%, rgba(80,78,123,0.5) 70%, rgba(80,78,123,1) 100%)",

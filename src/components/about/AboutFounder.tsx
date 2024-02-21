@@ -6,12 +6,12 @@ import founder from "../../assests/image 17.png"
 export default function AboutFounder() {
     return (
         <div>
-            <div className='text-4xl font-bold text-[#7972C2] flex justify-center'>ABOUT FOUNDER</div>
+            <div className='text-4xl font-bold text-white flex justify-center '>ABOUT FOUNDER</div>
             <div className='flex p-12 gap-12'>
                 <div className='w-[2500px]'>
                     <Image src={founder} alt="founder" width={300} />
                 </div>
-                <div className='text-lg text-[#7972C2]'>
+                <div className='text-lg text-white'>
                     Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
                     in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
                     Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked
