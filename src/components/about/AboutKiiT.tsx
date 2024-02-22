@@ -4,7 +4,10 @@ import kissLogo from "../../assests/image 9.png"
 
 export default function AboutKiiT() {
     return (
-        <div className="p-28 flex gap-20">
+        <div className="p-28 flex gap-20"  style={{
+            background:
+              "linear-gradient(180deg, rgba(80,78,123,1) 0%, rgba(80,78,123,0.5) 30%, rgba(80,78,123,0.5) 70%, rgba(80,78,123,1) 100%)",
+          }}>
             <div className="text-justify">
                 <div className="h-20 flex justify-center">
                     <Image src={kiitLogo} alt="kiit-logo" height={80} />

@@ -6,6 +6,7 @@ import Form2 from "./form2";
 import Form3 from "./form3";
 import Form4 from "./form4";
 import contact from "/public/navbar/contact.png";
+import Footer from "@/components/Footer";
 const register: React.FC = () => {
   const [activeForm, setActiveForm] = useState<number | null>(null);
 
@@ -52,8 +53,14 @@ const register: React.FC = () => {
           </div>
         </div>
       </div> */}
-      <div className="w-full min-h-screen">
-        <div className="pt-32 flex flex-col md:flex-row justify-center gap-4 pb-12">
+      <div className="w-full min-h-screen" style={{
+        background:
+          "linear-gradient(180deg, rgba(80,78,123,1) 0%, rgba(80,78,123,0.5) 30%, rgba(80,78,123,0.5) 70%, rgba(80,78,123,1) 100%)",
+      }}  >
+
+        <div className="pt-32 ">
+        <h1 className="text-bold text-3xl text-center pb-9">Register Forms</h1>
+        <div className="flex flex-col md:flex-row justify-center gap-4 pb-12">
           <button
             className="rounded-full border-none mx-4 outline-none p-3 bg-gradient-to-t from-[#0c0a1e] to-[#6056d2]"
             onClick={() => setActiveForm(1)}
@@ -78,9 +85,11 @@ const register: React.FC = () => {
           >
             IA/SA Application
           </button>
+          </div>
         </div>
         {renderForm()}
       </div>
+      <Footer />
     </>
   );
 };

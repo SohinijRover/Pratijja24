@@ -5,7 +5,10 @@ import founder from "../../assests/image 17.png"
 
 export default function AboutFounder() {
     return (
-        <div>
+        <div  style={{
+            background:
+              "linear-gradient(180deg, rgba(80,78,123,1) 0%, rgba(80,78,123,0.5) 30%, rgba(80,78,123,0.5) 70%, rgba(80,78,123,1) 100%)",
+          }}>
             <div className='text-4xl font-bold text-white flex justify-center '>ABOUT FOUNDER</div>
             <div className='flex p-12 gap-12'>
                 <div className='w-[2500px]'>
