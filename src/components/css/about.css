@@ -9,9 +9,15 @@
   font-size: 113px;
   font-weight: bolder;
   color: rgba(121, 114, 194, 1);
-  /* margin-top: 120px; */
 }
 
 .aboutPratijja {
-  background-image: url("../../assests/about\ partijja\ \(1\).png");
+  background-image: url("../../assests/about partijja (1).png");
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .aboutMain {
+    font-size: 60px; 
+  }
 }
