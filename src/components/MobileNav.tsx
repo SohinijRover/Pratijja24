@@ -61,7 +61,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ isOpen, toggleNavbar }) => {
           </li>
           <li className="hover:pl-2 duration-200">
             {" "}
-            <Link href={"/issue"}>Contact Us </Link>
+            <Link href={"/contact"}>Contact Us </Link>
           </li>
         </ul>
       </div>
