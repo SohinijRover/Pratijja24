@@ -61,3 +61,12 @@ model form4 {
   institution String
   speaking    String
 }
+
+model contact {
+  id String @id @default(uuid())
+  name String
+  phone String
+  email String
+  issue String
+
+}
