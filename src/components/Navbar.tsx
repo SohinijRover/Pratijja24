@@ -34,7 +34,7 @@ const Navbar = () => {
     <>
       <MobileNav isOpen={isOpen} toggleNavbar={toggleNavbar} />
       <nav
-        className={` ${
+        className={`${
           showBackground && "backdrop-blur-[80px]"
         } top-0  fixed  z-[50] left-0 right-0  `}
       >
@@ -59,11 +59,11 @@ const Navbar = () => {
             <Link href={"/"} className={`hover:scale-[1.14] pl-16 duration-300 ${pathname === "/" && "text-indigo-500"}`}>
               Home
             </Link>
-            <Link href={"/speakers"} className={`hover:scale-[1.14] duration-300 ${pathname === "/events" && "text-indigo-500"}`}>
-              Speakers
-            </Link>
             <Link href={"/about"} className={`hover:scale-[1.14] duration-300 ${pathname === "/about" && "text-indigo-500"}`}>
               About
+            </Link>
+            <Link href={"/speakers"} className={`hover:scale-[1.14] duration-300 ${pathname === "/events" && "text-indigo-500"}`}>
+              Speakers
             </Link>
             <Link href={"/members"} className={`hover:scale-[1.14] duration-300 ${pathname === "/members" && "text-indigo-500"}`}>
               Members

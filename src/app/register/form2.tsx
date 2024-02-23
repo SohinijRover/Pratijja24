@@ -74,6 +74,7 @@ function Form2() {
       <form onSubmit={form.handleSubmit(onSubmit)}>
         <div className="space-y-4 w-full px-4 md:px-8 py-8 max-w-screen-2xl mx-auto">
           <div className="flex-col sm:flex">
+            <div className="flex items-center justify-center">
             <FormField
               control={form.control}
               name="email"
@@ -110,7 +111,9 @@ function Form2() {
                 </FormItem>
               )}
             />
+            </div>
           </div>
+
           <div className="text-indigo-500 text-[25px] font-semibold text-center uppercase">
             Point Of Contact - 1
           </div>

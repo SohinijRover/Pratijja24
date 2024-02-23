@@ -28,38 +28,13 @@ const register: React.FC = () => {
   return (
     <>
       <Navbar />
-      {/* <div className="w-screen h-screen relative">
-        <div className="top-36 h-screen w-screen flex flex-col items-center justify-center relative z-10">
-          <div className="relative z-1">
-          <div>
-            <button
-              className="rounded-full border-none ms-5 outline-none p-3 m-20"
-              style={{ backgroundImage: `url(${contact.src})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}
-              onClick={() => setActiveForm(1)}>Cross Teams Registration</button>
-            <button
-              className="rounded-full border-none ms-5 outline-none p-3 m-20"
-              style={{ backgroundImage: `url(${contact.src})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}
-              onClick={() => setActiveForm(2)}>Institutional Teams Registration</button>
-            <button
-              className="rounded-full border-none ms-5 outline-none p-3 m-20"
-              style={{ backgroundImage: `url(${contact.src})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}
-              onClick={() => setActiveForm(3)}>Independent Adjudicator Registration</button>
-            <button
-              className="rounded-full border-none ms-5 outline-none p-3 m-20"
-              style={{ backgroundImage: `url(${contact.src})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}
-              onClick={() => setActiveForm(4)}>IA/SA Application</button>
-          </div>
-            {renderForm()}
-          </div>
-        </div>
-      </div> */}
       <div className="w-full min-h-screen" style={{
         background:
-          "linear-gradient(180deg, rgba(80,78,123,1) 0%, rgba(80,78,123,0.5) 30%, rgba(80,78,123,0.5) 70%, rgba(80,78,123,1) 100%)",
+          "linear-gradient(180deg, rgba(80,78,123,0.5) 70%, rgba(80,78,123,1) 100%)",
       }}  >
 
         <div className="pt-32 ">
-        <h1 className="text-bold text-3xl text-center pb-9">Register Forms</h1>
+        <h1 className="text-bold text-5xl text-pretty text-center pb-9">Register Forms</h1>
         <div className="flex flex-col md:flex-row justify-center gap-4 pb-12">
           <button
             className="rounded-full border-none mx-4 outline-none p-3 bg-gradient-to-t from-[#0c0a1e] to-[#6056d2]"

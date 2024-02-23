@@ -44,7 +44,7 @@ function form3() {
       });
       const data = await res.json();
       if (!data.success) {
-        toast.error(data.message);
+        toast.error(data.message);``
       } else {
         toast.success(data.message);
       }
