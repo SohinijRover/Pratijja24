@@ -34,13 +34,13 @@ const register: React.FC = () => {
       }}  >
 
         <div className="pt-32 ">
-        <h1 className="text-bold text-5xl text-pretty text-center pb-9">Register Forms</h1>
+        <h1 className="text-bold text-5xl text-pretty text-center pb-9">Registration Forms</h1>
         <div className="flex flex-col md:flex-row justify-center gap-4 pb-12">
           <button
             className="rounded-full border-none mx-4 outline-none p-3 bg-gradient-to-t from-[#0c0a1e] to-[#6056d2]"
             onClick={() => setActiveForm(1)}
           >
-            Cross Teams Registeration
+            Cross Teams Registration
           </button>
           <button
             className="rounded-full border-none mx-4 outline-none p-3 bg-gradient-to-t from-[#0c0a1e] to-[#6056d2]"
