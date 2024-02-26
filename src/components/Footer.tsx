@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
       <div id="footer" className="w-full h-full " 
       style={{
         background:
-          "linear-gradient(180deg, rgba(80,78,123,1) 0%, rgba(80,78,123,0.5) 30%, rgba(80,78,123,0.5) 70%, rgba(80,78,123,1) 100%)",
+          "linear-gradient(180deg, rgba(6,38,34,1) 0%, rgba(26,55,50,1) 30%, rgba(38,90,81,1) 70%, rgba(127,204,195,1) 100%)",
       }}>
         <footer className=" md:mx-auto mx-2 px-4 py-6 rounded-lg">
           <div className="container mx-auto">

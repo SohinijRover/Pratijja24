@@ -61,7 +61,7 @@ function form3() {
       <form onSubmit={form.handleSubmit(onSubmit)}>
         <div className="space-y-4 w-full px-4 md:px-8 py-8 max-w-screen-2xl mx-auto">
           
-          <div className="text-indigo-500 text-[25px] font-semibold text-center uppercase">
+          <div className="text-white text-[25px] font-semibold text-center uppercase">
           Ghanshyam '24 IA/SA
           </div>
           <div className="flex flex-col sm:flex-row gap-4 w-full pb-12 text-black">
@@ -130,7 +130,7 @@ function form3() {
               )}
             />
           </div>
-          <div className="text-indigo-500 text-[25px] font-semibold text-center uppercase">
+          <div className="text-white text-[25px] font-semibold text-center uppercase">
             Speaking Credentials
           </div>
           <FormField
@@ -149,7 +149,7 @@ function form3() {
               </FormItem>
             )}
           />
-          <div className="text-indigo-500 text-[25px] font-semibold text-center uppercase">
+          <div className="text-white text-[25px] font-semibold text-center uppercase">
           Judging Credentials
           </div>
           <FormField
@@ -173,7 +173,7 @@ function form3() {
               type="submit"
               disabled={loading}
               className={`${loading && "opacity-50 cursor-not-allowed"
-                } mx-auto mt-2 flex items-center gap-4 py-1 md:py-2 leading-none px-4 md:px-6 rounded-full bg-gradient-to-b from-[#174ACE] to-indigo-500 text-sm md:text-lg font-medium text-white pt-5 mb-10`}
+                } mx-auto mt-2 flex items-center gap-4 py-1 md:py-2 leading-none px-4 md:px-6 rounded-full bg-gradient-to-b from-[#507B77] to-[#507B77] text-sm md:text-lg font-medium text-white pt-5 mb-10`}
             >
               <PulseLoader loading={loading} size={6} color="#fff" />
               <p>Submit</p>

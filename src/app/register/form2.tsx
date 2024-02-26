@@ -114,7 +114,7 @@ function Form2() {
             </div>
           </div>
 
-          <div className="text-indigo-500 text-[25px] font-semibold text-center uppercase">
+          <div className="text-white text-[25px] font-semibold text-center uppercase">
             Point Of Contact - 1
           </div>
           <div className="flex flex-col sm:flex-row gap-4 w-full pb-12 text-black">
@@ -169,7 +169,7 @@ function Form2() {
               )}
             />
           </div>
-          <div className="text-indigo-500 text-[25px] font-semibold text-center uppercase ">
+          <div className="text-white text-[25px] font-semibold text-center uppercase ">
             Point Of Contact - 2
           </div>
           <div className="flex flex-col sm:flex-row gap-4 w-full pb-12 text-black">
@@ -287,7 +287,7 @@ function Form2() {
             </Box>
           </div>
 
-          <div className="text-indigo-500 text-[25px] font-semibold text-center uppercase">
+          <div className="text-white text-[25px] font-semibold text-center uppercase">
             Accomodation
           </div>
           <div className="flex justify-center items-center gap-4">
@@ -310,7 +310,7 @@ function Form2() {
             />
             <span className="text-xl">Need accomodation ?</span>
           </div>
-          <div className="text-indigo-500 text-[25px] font-semibold text-center uppercase">
+          <div className="text-white text-[25px] font-semibold text-center uppercase">
             Message
           </div>
           <FormField
@@ -333,7 +333,7 @@ function Form2() {
               type="submit"
               disabled={loading}
               className={`${loading && "opacity-50 cursor-not-allowed"
-                } mx-auto mt-2 flex items-center gap-4 py-1 md:py-2 leading-none px-4 md:px-6 rounded-full bg-gradient-to-b from-[#174ACE] to-indigo-500 text-sm md:text-lg font-medium text-white pt-5 mb-10`}
+                } mx-auto mt-2 flex items-center gap-4 py-1 md:py-2 leading-none px-4 md:px-6 rounded-full bg-gradient-to-b from-[#507B77] to-[#507B77] text-sm md:text-lg font-medium text-white pt-5 mb-10`}
             >
               <PulseLoader loading={loading} size={6} color="#fff" />
               <p>Submit</p>

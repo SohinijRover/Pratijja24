@@ -6,11 +6,11 @@ import kissLogo from '../../assests/image 9.png';
 export default function AboutKiiT() {
   return (
     <div
-      className="p-4 md:p-12 flex flex-col md:flex-row gap-4 md:gap-20"
-      style={{
-        background: 'rgba(121, 114, 194, 0.1)',
-      }}
-    >
+  className="p-4 md:p-12 flex flex-col md:flex-row gap-4 md:gap-20"
+  style={{
+    background: 'linear-gradient(to bottom, #265A51 0%, #265A51 30%, #1A3732 70%, #062622 100%)',
+  }}
+>
       {/* About KIIT */}
       <div className="text-justify">
         <div className="h-20 flex justify-center">

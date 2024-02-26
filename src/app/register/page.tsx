@@ -29,37 +29,37 @@ const register: React.FC = () => {
     <>
       <Navbar />
       <div className="w-full min-h-screen" style={{
-        background:
-          "linear-gradient(180deg, rgba(80,78,123,0.5) 70%, rgba(80,78,123,1) 100%)",
-      }}  >
+        background: 'linear-gradient(to bottom, #062622 0%, #265A51 30%, #265A51 70%, #062622 100%)',
+      }} >
 
         <div className="pt-32 ">
-        <h1 className="text-bold text-5xl text-pretty text-center pb-9">Registration Forms</h1>
-        <div className="flex flex-col md:flex-row justify-center gap-4 pb-12">
-          <button
-            className="rounded-full border-none mx-4 outline-none p-3 bg-gradient-to-t from-[#0c0a1e] to-[#6056d2]"
-            onClick={() => setActiveForm(1)}
-          >
-            Cross Teams Registration
-          </button>
-          <button
-            className="rounded-full border-none mx-4 outline-none p-3 bg-gradient-to-t from-[#0c0a1e] to-[#6056d2]"
-            onClick={() => setActiveForm(2)}
-          >
-            Institutional Teams Registration
-          </button>
-          <button
-            className="rounded-full border-none mx-4 outline-none p-3 bg-gradient-to-t from-[#0c0a1e] to-[#6056d2]"
-            onClick={() => setActiveForm(3)}
-          >
-            Independent Adjudicator Registration
-          </button>
-          <button
-            className="rounded-full border-none mx-4 outline-none p-3 bg-gradient-to-t from-[#0c0a1e] to-[#6056d2]"
-            onClick={() => setActiveForm(4)}
-          >
-            IA/SA Application
-          </button>
+          <h1 className="text-bold text-5xl text-pretty text-center pb-9">Registration Forms</h1>
+          <div className="flex flex-col md:flex-row justify-center gap-4 pb-12">
+            <button
+              className="rounded-full border-none mx-4 outline-none p-3 bg-gradient-to-t from-[#041019] to-[#507B77]"
+              onClick={() => setActiveForm(1)}
+            >
+              Cross Teams Registration
+            </button>
+            <button
+              className="rounded-full border-none mx-4 outline-none p-3 bg-gradient-to-t from-[#041019] to-[#507B77]"
+              onClick={() => setActiveForm(2)}
+            >
+              Institutional Teams Registration
+            </button>
+            <button
+              className="rounded-full border-none mx-4 outline-none p-3 bg-gradient-to-t from-[#041019] to-[#507B77]"
+              onClick={() => setActiveForm(3)}
+            >
+              Independent Adjudicator Registration
+            </button>
+            <button
+              className="rounded-full border-none mx-4 outline-none p-3 bg-gradient-to-t from-[#041019] to-[#507B77]"
+              onClick={() => setActiveForm(4)}
+            >
+              IA/SA Application
+            </button>
+
           </div>
         </div>
         {renderForm()}

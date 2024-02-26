@@ -8,8 +8,8 @@ export default function AboutFounder() {
       <div
         className='min-h-100 flex flex-col'
         style={{
-            background: 'rgba(121, 114, 194, 0.1)',
-          }}
+          background: 'linear-gradient(to bottom, #062622 0%, #265A51 30%, #1A3732 70%, #062622 100%)',
+        }}
       >
         <div className='text-4xl font-bold text-white flex justify-center py-8'>
           ABOUT FOUNDER

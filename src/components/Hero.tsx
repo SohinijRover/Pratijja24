@@ -7,9 +7,13 @@ import Timer from "@/components/Timer";
 import contact from "/public/navbar/contact.png";
 
 const Hero = () => {
+  const gradientStyle = {
+    background: "linear-gradient(180deg, #000000 70%,#1A3732 80%, #7fCCC3 100%)",
+  };
+
   return (
     <>
-      <div className="h-screen font-sans flex flex-col md:flex-row items-center justify-center bg-gradient-to-t from-page-purple from-0% to-transparent to-20% max-h-[100vh] mt-20">
+      <div className="h-screen font-sans flex flex-col md:flex-row items-center justify-center" style={gradientStyle}>
         <div className="text-center p-10 mt-10 md:w-1/3">
           <h1 className="font-sans text-3xl sm:text-3xl">
             Get Inside in The <br /> Philosopher’s Mind
@@ -27,12 +31,16 @@ const Hero = () => {
             </button>
           </Link>
         </div>
-        <div className="text-white text-center mt-4 md:w-1/3">
+        <div className="text-white text-center md:w-1/3">
           <Image
             src={mic}
             alt=""
             className="h-full w-full md:h-[50%] md:w-full object-cover"
-            width={600}
+            style={{
+              height: "50%", 
+              width: "70%",
+            }}
+            width={1000}
           />
         </div>
         <div className=" container m-10 flex flex-col items-center justify-center mt-4 md:left-10 2xl:left-0 md:w-1/3">
@@ -40,6 +48,7 @@ const Hero = () => {
           <Timer />
         </div>
       </div>
+      
     </>
   );
 };

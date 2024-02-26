@@ -56,23 +56,23 @@ const Navbar = () => {
             )}
           </div>
           <div className="hidden sm:flex justify-between items-center  text-xl space-x-4 p-4 ">
-            <Link href={"/"} className={`hover:scale-[1.14] pl-16 duration-300 ${pathname === "/" && "text-indigo-500"}`}>
+            <Link href={"/"} className={`hover:scale-[1.14] pl-16 duration-300 ${pathname === "/" && "text-green-500"}`}>
               Home
             </Link>
-            <Link href={"/about"} className={`hover:scale-[1.14] duration-300 ${pathname === "/about" && "text-indigo-500"}`}>
+            <Link href={"/about"} className={`hover:scale-[1.14] duration-300 ${pathname === "/about" && "text-green-500"}`}>
               About
             </Link>
-            <Link href={"/speakers"} className={`hover:scale-[1.14] duration-300 ${pathname === "/events" && "text-indigo-500"}`}>
+            <Link href={"/speakers"} className={`hover:scale-[1.14] duration-300 ${pathname === "/events" && "text-green-500"}`}>
               Speakers
             </Link>
-            <Link href={"/members"} className={`hover:scale-[1.14] duration-300 ${pathname === "/members" && "text-indigo-500"}`}>
+            <Link href={"/members"} className={`hover:scale-[1.14] duration-300 ${pathname === "/members" && "text-green-500"}`}>
               Members
             </Link>
-            <Link href={"/register"} className={`hover:scale-[1.14] duration-300 ${pathname === "/register" && "text-indigo-500"}`}>
+            <Link href={"/register"} className={`hover:scale-[1.14] duration-300 ${pathname === "/register" && "text-green-500"}`}>
               Register
             </Link>
             <Link href="/contact">
-              <button className={`rounded-full border-none outline-none p-3 hover:scale-[1.14] duration-300 ${pathname === "/contactus" && "text-indigo-500"}`} style={{ backgroundImage: `url(${contact.src})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
+              <button className={`rounded-full border-none outline-none p-3 hover:scale-[1.14] duration-300 ${pathname === "/contactus" && "text-green-600"}`} style={{ backgroundImage: `url(${contact.src})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
                 Contact Us
               </button>
             </Link>

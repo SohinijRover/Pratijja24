@@ -69,7 +69,7 @@ function form1() {
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)}>
         <div className="space-y-4 w-full px-4 md:px-8 py-8 max-w-screen-2xl mx-auto">
-          <div className="text-indigo-500 text-[25px] font-semibold text-center uppercase">
+          <div className="text-white text-[25px] font-semibold text-center uppercase">
             Team Name
           </div>
           <FormField
@@ -90,7 +90,7 @@ function form1() {
               </FormItem>
             )}
           />
-          <div className="text-indigo-500 text-[25px] font-semibold text-center uppercase">
+          <div className="text-white text-[25px] font-semibold text-center uppercase">
             Speaker - 1
           </div>
           <div className="flex flex-col sm:flex-row gap-4 w-full pb-12 text-black">
@@ -163,7 +163,7 @@ function form1() {
               )}
             />
           </div>
-          <div className="text-indigo-500 text-[25px] font-semibold text-center uppercase ">
+          <div className="text-white text-[25px] font-semibold text-center uppercase ">
             Speaker - 2
           </div>
           <div className="flex flex-col sm:flex-row gap-4 w-full pb-12 text-black">
@@ -236,7 +236,7 @@ function form1() {
               )}
             />
           </div>
-          <div className="text-indigo-500 text-[25px] font-semibold text-center uppercase">
+          <div className="text-white text-[25px] font-semibold text-center uppercase">
             Speaker - 3
           </div>
           <div className="flex flex-col sm:flex-row gap-4 w-full pb-12 text-black">
@@ -309,7 +309,7 @@ function form1() {
               )}
             />
           </div>
-          <div className="text-indigo-500 text-[25px] font-semibold text-center uppercase">
+          <div className="text-white text-[25px] font-semibold text-center uppercase">
             Accomodation
           </div>
           <div className="flex justify-center items-center gap-4">
@@ -333,7 +333,7 @@ function form1() {
             />
             <span className="text-xl">Need accomodation ?</span>
           </div>
-          <div className="text-indigo-500 text-[25px] font-semibold text-center uppercase">
+          <div className="text-white text-[25px] font-semibold text-center uppercase">
             Message
           </div>
           <FormField
@@ -357,7 +357,7 @@ function form1() {
               type="submit"
               disabled={loading}
               className={`${loading && "opacity-50 cursor-not-allowed"
-                } mx-auto mt-2 flex items-center gap-4 py-1 md:py-2 leading-none px-4 md:px-6 rounded-full bg-gradient-to-b from-[#174ACE] to-indigo-500 text-sm md:text-lg font-medium text-white pt-5 mb-10`}
+                } mx-auto mt-2 flex items-center gap-4 py-1 md:py-2 leading-none px-4 md:px-6 rounded-full bg-gradient-to-b from-[#507B77] to-[#507B77] text-sm md:text-lg font-medium text-white pt-5 mb-10`}
             >
               <PulseLoader loading={loading} size={6} color="#fff" />
               <p>Submit</p>
