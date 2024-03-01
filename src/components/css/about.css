@@ -1,0 +1,23 @@
+.aboutMain {
+  background-image: url("../../assests/abouthero.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 113px;
+  font-weight: bolder;
+  color: rgba(121, 114, 194, 1);
+}
+
+.aboutPratijja {
+  background-image: url("../../assests/about partijja (1).png");
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .aboutMain {
+    font-size: 60px; 
+  }
+}
