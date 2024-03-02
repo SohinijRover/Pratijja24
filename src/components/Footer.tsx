@@ -1,6 +1,5 @@
 import React from "react";
 import { FaLinkedinIn, FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
-import Image from "next/image";
 
 const Footer: React.FC = () => {
   return (
@@ -14,7 +13,7 @@ const Footer: React.FC = () => {
           <div className="container mx-auto">
             <div className="flex flex-col">
               <div className="flex justify-center">
-                <h3 className="text-5xl text-center font-extrabold text-white pb-8">
+                <h3 className="text-2xl md:text-4xl text-center font-extrabold text-white pb-8">
                   CONTACT US
                 </h3>
               </div>
