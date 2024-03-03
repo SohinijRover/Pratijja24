@@ -19,26 +19,14 @@ export default function AboutFounder() {
             <Image src={founder} alt='founder' width={1600} height={1400} className='h-80 w-80 me-72' />
           </div>
           <div className='text-base md:text-lg text-white pt-4 md:pt-0'>
-            Contrary to popular belief, Lorem Ipsum is not simply random text. It
-            has roots in a piece of classical Latin literature from 45 BC, making
-            it over 2000 years old. Richard McClintock, a Latin professor at
-            Hampden-Sydney College in Virginia, looked up one of the more obscure
-            Latin words, consectetur, from a Lorem Ipsum passage, and going
-            through the cites of the word in classical literature, discovered the
-            undoubtable source. Lorem Ipsum comes from sections 1.10.32 and
-            1.10.33 of "de Finibus Bonorum Malorum" (The Extremes of Good and
-            Evil) by Cicero, written in 45 BC. This book is a treatise on the
-            theory of ethics, very popular during the Renaissance. The first line
-            of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in
-            section 1.10.32. The standard chunk of Lorem Ipsum used since the
-            1500s is reproduced below for those interested. Sections 1.10.32 and
-            1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also
-            reproduced in their exact original form, accompanied by English
-            versions from the 1914 translation by H. Rackham. Contrary to popular
-            belief, Lorem Ipsum is not simply random text. It has roots in a
-            piece of classical Latin literature from 45 BC, making it over 2000
-            years old. Richard McClintock, a Latin professor at Hampden-Sydney
-            College in Virginia, looked up one of the more obscure Latin words.
+          Professor Achyuta Samanta is a renowned figure in the fields of education, philanthropy, and social work. He is the visionary behind the esteemed Kalinga Institute of Industrial Technology (KIIT) and Kalinga Institute of Social Sciences (KISS), both globally recognized educational institutions. KIIT, an Institute of Eminence, stands out as a premier university in India and worldwide, with a diverse student body of over 30,000 individuals from across India and 53 other nations. Meanwhile, KISS provides a nurturing environment for 60,000 indigenous children, offering them education free of charge.<br /><br />
+
+Beyond his contributions to education and tribal welfare, Prof. Samanta has made significant impacts in healthcare, rural development, and various cultural and societal domains. His journey from humble beginnings, growing up in poverty after losing his father at a young age, to achieving monumental success without any external support is truly remarkable.<br /><br />
+
+Prof. Samanta has transformed his native village of Kalarabanka in Cuttack into a Smart Village and elevated the entire Manpur Panchayat into a model cluster of villages. He has been honored with numerous international, national, and state awards, including the highest civilian awards from Bahrain and Mongolia, as well as 52 honorary doctorate degrees from institutions worldwide. He holds the distinction of being the first Odia to serve as a member of both the University Grants Commission (UGC) and the All India Council for Technical Education (AICTE). Additionally, he currently serves as a Member of Parliament (Lok Sabha) from Kandhamal, Odisha, and presides as the President of the Volleyball Federation of India.<br /><br />
+
+As a social reformer, Prof. Samanta advocates for the "Art of Giving," a philosophy aimed at fostering global peace and happiness. Despite his numerous accomplishments, he maintains a humble lifestyle and remains dedicated to spreading joy and eradicating poverty, hunger, and illiteracy on a global scale.<br /><br />
+
           </div>
         </div>
       </div>

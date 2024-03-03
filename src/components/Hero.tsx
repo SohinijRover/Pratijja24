@@ -18,7 +18,7 @@ const Hero = () => {
           <h1 className="font-sans text-3xl sm:text-3xl">
             Get Inside in The <br /> Philosopher&apos;s Mind
           </h1>
-          <Link href="/register">
+          <Link href="/contact">
             <button
               className={`rounded-full border-none outline-none p-3 hover:scale-[1.14] duration-300 text-white text-xl mt-4`}
               style={{
@@ -27,7 +27,7 @@ const Hero = () => {
                 backgroundRepeat: "no-repeat",
               }}
             >
-              REGISTER
+              Contact Us
             </button>
           </Link>
         </div>

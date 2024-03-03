@@ -69,14 +69,19 @@ const Navbar = () => {
               Members
             </Link> */}
             <div className='relative group'>
-              <span className='cursor-pointer'>Register</span>
+              <span
+                className='cursor-pointer rounded-full border-none outline-none p-3 hover:scale-[1.14] duration-300 text-white text-xl mt-4'
+                style={{
+                  backgroundImage: `url(${contact.src})`,
+                  backgroundSize: 'cover',
+                  backgroundRepeat: 'no-repeat',
+                }}
+              >
+                Register
+              </span>
               <PratijjaDropdown />
             </div>
-            <Link href="/contact">
-              <button className={`rounded-full border-none outline-none p-3 hover:scale-[1.14] duration-300 ${pathname === "/contactus" && "text-green-600"}`} style={{ backgroundImage: `url(${contact.src})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
-                Contact Us
-              </button>
-            </Link>
+
 
           </div>
 
