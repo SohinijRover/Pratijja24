@@ -7,16 +7,16 @@ export default function AboutFounder() {
     return (
       <div
         className='min-h-100 flex flex-col'
-        style={{
+       style={{
           background: 'linear-gradient(to bottom, #062622 0%, #265A51 30%, #1A3732 70%, #062622 100%)',
-        }}
+        }} 
       >
         <div className='text-4xl font-bold text-white flex justify-center py-8'>
           ABOUT FOUNDER
         </div>
         <div className='flex flex-col md:flex-row p-4 md:p-12 gap-8 md:gap-12 flex-1 overflow-hidden'>
           <div className='w-full md:w-1/2'>
-            <Image src={founder} alt='founder' width={600} height={400} />
+            <Image src={founder} alt='founder' width={1600} height={1400} className='h-80 w-80 me-72' />
           </div>
           <div className='text-base md:text-lg text-white pt-4 md:pt-0'>
             Contrary to popular belief, Lorem Ipsum is not simply random text. It

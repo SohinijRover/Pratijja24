@@ -3,11 +3,14 @@ import '../css/about.css';
 
 export default function AboutPratijja() {
   return (
-    <div className='aboutPratijja'>
-      <div className='flex justify-center items-center text-4xl md:text-6xl pt-8 md:pt-12 font-bold text-[#7972C2]'>
+    <div className='aboutPratijja' style={{
+      background: 'linear-gradient(to bottom, #062622 0%, #265A51 30%, #1A3732 70%, #265A51 100%)',
+    }}>
+      <div className='flex justify-center items-center text-4xl md:text-6xl pt-8 md:pt-12 font-bold text-white'>
         About Pratijja - 19.0
       </div>
-      <div className='p-4 md:p-12 pt-4 md:pt-8 text-base md:text-lg text-[#7972C2] text-justify' >
+      <div className='p-4 md:p-12 pt-4 md:pt-8 text-base md:text-lg text-white text-justify'   
+      >
         Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin
         literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney
         College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and

@@ -33,7 +33,7 @@ const Footer: React.FC = () => {
               <div className="w-full md:w-1/2 lg:w-1/5 mb-4 text-left">
                 <h4 className="text-lg font-bold text-white">PHONE</h4>
                 <p className="text-white">
-                  <a href="tel: +917735127138">+91-7735127138 (Satyajeet Das)</a>
+                  <a href="tel: +917735127138">+91-7735127138 (Gourav Vardhan)</a>
                 </p>
               </div>
               <div className="w-full md:w-1/2 lg:w-1/5 mb-4 md:pl-16">
@@ -80,11 +80,6 @@ const Footer: React.FC = () => {
                 <p>
                   <a href="#" className="text-white block">
                     About Us
-                  </a>
-                </p>
-                <p>
-                  <a href="#" className="text-white block">
-                    Members
                   </a>
                 </p>
                 <p>
