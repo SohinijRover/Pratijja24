@@ -62,12 +62,12 @@ const Navbar = () => {
             <Link href={"/about"} className={`hover:scale-[1.14] duration-300 ${pathname === "/about" && "text-green-500"}`}>
               About
             </Link>
-            <Link href={"/speakers"} className={`hover:scale-[1.14] duration-300 ${pathname === "/events" && "text-green-500"}`}>
+            {/* <Link href={"/speakers"} className={`hover:scale-[1.14] duration-300 ${pathname === "/events" && "text-green-500"}`}>
               Speakers
             </Link>
             <Link href={"/members"} className={`hover:scale-[1.14] duration-300 ${pathname === "/members" && "text-green-500"}`}>
               Members
-            </Link>
+            </Link> */}
             <div className='relative group'>
               <span className='cursor-pointer'>Register</span>
               <PratijjaDropdown />
