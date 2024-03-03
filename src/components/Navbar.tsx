@@ -39,7 +39,7 @@ const Navbar = () => {
         } top-0  fixed  z-[50] left-0 right-0  `}
       >
         <div
-          className={`flex max-w-[1900px]    mx-auto justify-between w-full  p-4  lg:px-20 py-2 rounded-sm items-center text-white`}
+          className={`flex max-w-[1900px] mx-auto justify-between w-full p-4 lg:px-20 py-2 rounded-sm items-center text-white`}
         >
           <div>
             {!isOpen && (

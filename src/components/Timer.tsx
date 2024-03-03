@@ -11,7 +11,7 @@ const Timer: React.FC = () => {
 
   return (
     <>
-        <div className="h-auto flex items-center justify-end pe-12 my-auto translate-x-10">
+        <div className="h-auto flex items-center justify-end pe-12 my-auto translate-x-10 mt-6">
             <div className="text-center text-4xl sm:text-5xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#445DB6] to-[#7860C5]">
                 <CountdownTimer targetDate={targetDate} />
             </div>
@@ -20,4 +20,4 @@ const Timer: React.FC = () => {
   );
 };
 
-export default Timer;
+export default Timer;

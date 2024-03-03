@@ -8,15 +8,15 @@ import contact from "/public/navbar/contact.png";
 
 const Hero = () => {
   const gradientStyle = {
-    background: "linear-gradient(180deg, #000000 70%,#1A3732 80%, #7fCCC3 100%)",
+    background: "linear-gradient(180deg, #000000 75%,#1A3732 85%, #7fCCC3 100%)",
   };
 
   return (
     <>
-      <div className="h-screen font-sans flex flex-col md:flex-row items-center justify-center" style={gradientStyle}>
+      <div className="h-screen font-sans flex flex-col lg:flex-row items-center justify-center mt-40 lg:mt-0" style={gradientStyle}>
         <div className="text-center p-10 mt-10 md:w-1/3">
           <h1 className="font-sans text-3xl sm:text-3xl">
-            Get Inside in The <br /> Philosopher’s Mind
+            Get Inside in The <br /> Philosopher&apos;s Mind
           </h1>
           <Link href="/register">
             <button
@@ -35,16 +35,12 @@ const Hero = () => {
           <Image
             src={mic}
             alt=""
-            className="h-full w-full md:h-[50%] md:w-full object-cover"
-            style={{
-              height: "50%", 
-              width: "70%",
-            }}
+            className="h-[400px] w-[300px] mix-blend-screen"
             width={1000}
           />
         </div>
-        <div className=" container m-10 flex flex-col items-center justify-center mt-4 md:left-10 2xl:left-0 md:w-1/3">
-          <Image src={coming} alt="" className="px-2" width={600} />
+        <div className=" container m-10 flex flex-col items-center justify-center md:left-10 2xl:left-0 md:w-1/3 mt-32">
+          <Image src={coming} alt="" className="px-2 w-8/12" width={500} />
           <Timer />
         </div>
       </div>
