@@ -2,6 +2,8 @@ import TextElement from "@/components/details/ListElement";
 import Crousel from "@/components/details/Crousel";
 import img1 from "/public/hero/img1.jpeg";
 import img2 from "/public/hero/img2.jpeg";
+import img3 from "/public/hero/img3.jpeg";
+
 const Hero = () => {
   return (
     <>
@@ -35,7 +37,7 @@ const Hero = () => {
           ></TextElement>
         </div>
         <div className="flex-1 md:h-screen md:w-6/12 flex justify-center items-center">
-          <Crousel thumb={[img1.src, img2.src, img1.src]} />
+          <Crousel thumb={[img1.src, img2.src, img3.src]} />
         </div>
       </div>
 
