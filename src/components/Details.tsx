@@ -9,7 +9,7 @@ const Hero = () => {
   return (
     <>
       <div
-        className="h-100 flex flex-col md:flex-row pt-24 md:pt-0"
+        className="h-100 flex flex-col md:flex-row pt-32 md:pt-0"
         style={{
           background:
             "linear-gradient(180deg, rgba(127,204,195,1) 0%, rgba(38,90,81,1) 30%, rgba(26,55,50,1) 70%, rgba(6,38,34,1) 100%)",

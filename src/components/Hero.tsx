@@ -46,16 +46,14 @@ const Hero = () => {
             <Timer />
           </div>
         </div>
-        <div className="text-center mt-5 ">
-          <h1 className="text-[40px] font-semibold">15th - 17th March 2024</h1>
+        <div className="text-center mt-[240px] md:mt-20">
+          <h1 className="text-lg md:text-[40px] font-semibold">15th - 17th March 2024</h1>
           <div className="flex justify-center items-center">
-            <h1 className="text-white text-[25px] md:text-[20px] lg:text-[25px] font-semibold text-center uppercase">win prizes worth </h1>
-            <p className="text-bold ps-2 text-[30px] md:text-[25px] lg:text-[30px]"> 77K</p>
+            <h1 className="text-white  md:text-[20px] lg:text-[25px] font-semibold text-center uppercase">win prizes worth </h1>
+            <p className="text-bold ps-2 md:text-[25px] lg:text-[30px]"> 77K</p>
           </div>
         </div>
       </div>
-
-
     </>
   );
 };
