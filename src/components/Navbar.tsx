@@ -5,6 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import MobileNav from "./MobileNav";
 import logo from "/public/navbar/pratijjalogo.png";
+import kiit from "/public/navbar/kiit.png";
+import ksac from "/public/navbar/ksac.png";
 import contact from "/public/navbar/contact.png";
 import PratijjaDropdown from "./PratijjaDropdown";
 
@@ -41,16 +43,21 @@ const Navbar = () => {
         <div
           className={`flex max-w-[1900px] mx-auto justify-between w-full p-4 lg:px-20 py-2 rounded-sm items-center text-white`}
         >
+          <div className="flex h-10 w-16 me-52">
+            <Image src={kiit} alt="kiit logo" height={100} width={100}  />
+            <Image src={ksac} alt="ksac logo" height={100} width={100} className=" ps-4"/>
+          
+          </div>
           <div>
             {!isOpen && (
               <Link href={"/"}>
                 <Image
                   src={logo}
-                  alt="kiit logo"
-                  width={100}
-                  height={100}
+                  alt="pratijja logo"
+                  width={200}
+                  height={200}
                   quality={50}
-                  className="w-40 lg:w-100 lg:h-100 sm:w-30 sm:h-30 m-4 pt-3"
+                  className="w-60 lg:w-100 lg:h-100 sm:w-30 sm:h-30 m-4 pt-1"
                 />
               </Link>
             )}

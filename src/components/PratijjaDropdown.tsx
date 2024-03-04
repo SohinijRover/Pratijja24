@@ -5,19 +5,19 @@ const navItems = [
 
   {
     name: "Cross Team Form",
-    link: "https://forms.gle/z2QnmF2TYoa253EA6",
+    link: "/form1",
   },
   {
     name: "IA / SA Application",
-    link: "https://docs.google.com/forms/d/e/1FAIpQLSdRtLMKyF8vQHeKfm6TwhmnfrQvHHQb7rDlVYoalkpTPnZehQ/viewform?usp=send_form",
+    link: "/form4",
   },
   {
     name: "Institutional Team Form",
-    link: "https://forms.gle/ysdwLS1TYA8QLHYJ9",
+    link: "/form2",
   },
   {
     name: "Independent Adjudicator Form",
-    link: "https://forms.gle/FkJ6KQ8cmWFk5VPa7",
+    link: "/form3",
   },
 ];
 
