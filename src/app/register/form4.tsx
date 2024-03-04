@@ -62,7 +62,7 @@ function form3() {
         <div className="space-y-4 w-full px-4 md:px-8 py-8 max-w-screen-2xl mx-auto">
           
           <div className="text-white text-[25px] font-semibold text-center uppercase">
-          Ghanshyam '24 IA/SA
+          Pratijja v19 IA/SA
           </div>
           <div className="flex flex-col sm:flex-row gap-4 w-full pb-12 text-black">
             <FormField
