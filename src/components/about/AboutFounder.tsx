@@ -12,7 +12,7 @@ export default function AboutFounder() {
         }} 
       >
         <div className='text-4xl font-bold text-white flex justify-center py-8'>
-          ABOUT FOUNDER
+          ABOUT FOUNDER OF KIIT AND KISS
         </div>
         <div className='flex flex-col md:flex-row p-4 md:p-12 gap-8 md:gap-12 flex-1 overflow-hidden'>
           <div className='w-full md:w-1/2'>
