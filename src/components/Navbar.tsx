@@ -6,6 +6,7 @@ import Link from "next/link";
 import MobileNav from "./MobileNav";
 import logo from "/public/navbar/pratijjalogo.png";
 import contact from "/public/navbar/contact.png";
+import PratijjaDropdown from "./PratijjaDropdown";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -34,24 +35,23 @@ const Navbar = () => {
     <>
       <MobileNav isOpen={isOpen} toggleNavbar={toggleNavbar} />
       <nav
-        className={`${
-          showBackground && "backdrop-blur-[80px]"
-        } top-0  fixed  z-[50] left-0 right-0  `}
+        className={`${showBackground && "backdrop-blur-[80px]"
+          } top-0  fixed  z-[50] left-0 right-0  `}
       >
         <div
-          className={`flex max-w-[1900px]    mx-auto justify-between w-full  p-4  lg:px-20 py-2 rounded-sm items-center text-white`}
+          className={`flex max-w-[1900px] mx-auto justify-between w-full p-4 lg:px-20 py-2 rounded-sm items-center text-white`}
         >
           <div>
             {!isOpen && (
               <Link href={"/"}>
-              <Image
-                src={logo}
-                alt="kiit logo"
-                width={100}
-                height={100}
-                quality={50}
-                className="w-40 lg:w-100 lg:h-100 sm:w-30 sm:h-30 m-4 pt-3"
-              />
+                <Image
+                  src={logo}
+                  alt="kiit logo"
+                  width={100}
+                  height={100}
+                  quality={50}
+                  className="w-40 lg:w-100 lg:h-100 sm:w-30 sm:h-30 m-4 pt-3"
+                />
               </Link>
             )}
           </div>
@@ -62,32 +62,38 @@ const Navbar = () => {
             <Link href={"/about"} className={`hover:scale-[1.14] duration-300 ${pathname === "/about" && "text-green-500"}`}>
               About
             </Link>
-            <Link href={"/speakers"} className={`hover:scale-[1.14] duration-300 ${pathname === "/events" && "text-green-500"}`}>
+            {/* <Link href={"/speakers"} className={`hover:scale-[1.14] duration-300 ${pathname === "/events" && "text-green-500"}`}>
               Speakers
             </Link>
             <Link href={"/members"} className={`hover:scale-[1.14] duration-300 ${pathname === "/members" && "text-green-500"}`}>
               Members
-            </Link>
-            <Link href={"/register"} className={`hover:scale-[1.14] duration-300 ${pathname === "/register" && "text-green-500"}`}>
-              Register
-            </Link>
-            <Link href="/contact">
-              <button className={`rounded-full border-none outline-none p-3 hover:scale-[1.14] duration-300 ${pathname === "/contactus" && "text-green-600"}`} style={{ backgroundImage: `url(${contact.src})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
-                Contact Us
-              </button>
-            </Link>
-
+            </Link> */}
+            <div className='relative group'>
+              <span
+                className='cursor-pointer rounded-full border-none outline-none p-3 hover:scale-[1.14] duration-300 text-white text-xl mt-4'
+                style={{
+                  backgroundImage: `url(${contact.src})`,
+                  backgroundSize: 'cover',
+                  backgroundRepeat: 'no-repeat',
+                }}
+              >
+                Register
+              </span>
+              <PratijjaDropdown />
             </div>
-            
-            <button className=" sm:hidden" onClick={toggleNavbar}>
-              <Image
-                src="/mobiilenav.svg"
-                alt="mb"
-                width={28}
-                height={9}
-              ></Image>
-            </button>
+
+
           </div>
+
+          <button className=" sm:hidden" onClick={toggleNavbar}>
+            <Image
+              src="/mobiilenav.svg"
+              alt="mb"
+              width={28}
+              height={9}
+            ></Image>
+          </button>
+        </div>
       </nav>
     </>
   );

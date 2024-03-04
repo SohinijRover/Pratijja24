@@ -20,8 +20,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ isOpen, toggleNavbar }) => {
           }`}
         onClick={(e) => e.stopPropagation()}
         style={{
-          background:
-            "linear-gradient(180deg, rgba(80,78,123) 70%, rgba(80,78,123) 100%)",
+          background: 'linear-gradient(to bottom, #062622 0%, #265A51 30%, #265A51 70%, #062622 100%)',
         }}
       >
         <ul className="p-2 text-3xl flex flex-col items-start justify-center space-y-6">
@@ -47,14 +46,14 @@ const MobileNav: React.FC<MobileNavProps> = ({ isOpen, toggleNavbar }) => {
             {" "}
             <Link href={"/about"}>About </Link>
           </li>
-          <li className="hover:pl-2 duration-200">
+          {/* <li className="hover:pl-2 duration-200">
             {" "}
             <Link href={"/speakers"}>Speakers </Link>
           </li>
           <li className="hover:pl-2 duration-200">
             {" "}
             <Link href={"/members"}>Members </Link>
-          </li>
+          </li> */}
           <li className="hover:pl-2 duration-200">
             {" "}
             <Link href={"/register"}>Register </Link>

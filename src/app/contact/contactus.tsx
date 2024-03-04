@@ -40,13 +40,13 @@ const SignupForm = () => {
   };
 
   return (
-    <form className="max-w-md mx-auto " onSubmit={handleSubmit}>
-      <div className="relative z-0 w-full mb-5 group">
+    <form className="max-w-md mx-auto" onSubmit={handleSubmit}>
+      <div className="relative z-0 w-full mb-5 group text-white">
         <input
           type="email"
           name="email"
           id="floating_email"
-          className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+          className="block py-2.5 px-0 w-full text-sm text-white  bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
           placeholder=" "
           required
         />
@@ -112,7 +112,7 @@ const SignupForm = () => {
         disabled={loading}
         className={`${
           loading && "opacity-50 cursor-not-allowed"
-        } mx-auto mt-2 flex items-center gap-4 py-1 md:py-2 leading-none px-4 md:px-6 rounded-full bg-gradient-to-b from-[#174ACE] to-indigo-500 text-sm md:text-lg font-medium text-white pt-5 mb-10`}
+        } mx-auto mt-2 flex items-center gap-4 py-1 md:py-2 leading-none px-4 md:px-6 rounded-full bg-gradient-to-b from-[#7fCCC3] to-[#1A3732] text-sm md:text-lg font-medium text-white pt-5 mb-10`}
       >
         <PulseLoader loading={loading} size={6} color="#fff" />
         <p>Submit</p>

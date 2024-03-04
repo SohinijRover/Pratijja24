@@ -1,6 +1,5 @@
 import React from "react";
 import { FaLinkedinIn, FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
-import Image from "next/image";
 
 const Footer: React.FC = () => {
   return (
@@ -14,7 +13,7 @@ const Footer: React.FC = () => {
           <div className="container mx-auto">
             <div className="flex flex-col">
               <div className="flex justify-center">
-                <h3 className="text-5xl text-center font-extrabold text-white pb-8">
+                <h3 className="text-2xl md:text-4xl text-center font-extrabold text-white pb-8">
                   CONTACT US
                 </h3>
               </div>
@@ -34,7 +33,9 @@ const Footer: React.FC = () => {
               <div className="w-full md:w-1/2 lg:w-1/5 mb-4 text-left">
                 <h4 className="text-lg font-bold text-white">PHONE</h4>
                 <p className="text-white">
-                  <a href="tel: +917735127138">+91-7735127138 (Satyajeet Das)</a>
+                  <a href="tel: +916370226053">+91-6370226053 (Gourav Vardhan)</a>
+                  <a href="tel: +916206939600">+91-6206939600 (Priyansh Middha)</a>
+                  <a href="tel: +919752656760">+91-9752656760 (Ankit)</a>
                 </p>
               </div>
               <div className="w-full md:w-1/2 lg:w-1/5 mb-4 md:pl-16">
@@ -46,32 +47,26 @@ const Footer: React.FC = () => {
               <div className="w-full md:w-1/2 lg:w-1/5 mb-4 md:pl-16">
                 <h4 className="text-lg font-bold text-white">Email</h4>
                 <p className="text-white">
-                  <a href="mailto:kiitmun@gmail.com"></a>
+                  <a href="mailto:kronicleofficial@gmail.com">kronicleofficial@gmail.com</a>
                 </p>
               </div>
               <div className="w-full md:w-1/2 lg:w-1/5 mb-4 md:pl-16">
                 <h4 className="text-lg font-bold text-white text-center">Social Media</h4>
                 <div className="flex items-center">
                   <FaFacebook style={{ fontSize: "xs", marginRight: "0.5rem" }} />
-                  <a href="https://www.facebook.com/kiitmun/" className="text-white">
+                  <a href="https://www.facebook.com/Kroniclekiit/" className="text-white">
                     Facebook
                   </a>
                 </div>
                 <div className="flex items-center">
                   <FaInstagram style={{ fontSize: "xs", marginRight: "0.5rem" }} />
-                  <a href="https://www.instagram.com/instakiitmun/" className="text-white">
+                  <a href="https://www.instagram.com/kronicle_official/" className="text-white">
                     Instagram
                   </a>
                 </div>
                 <div className="flex items-center">
-                  <FaTwitter style={{ fontSize: "xs", marginRight: "0.5rem" }} />
-                  <a href="https://twitter.com/kiitmun" className="text-white">
-                    Twitter
-                  </a>
-                </div>
-                <div className="flex items-center">
                   <FaLinkedinIn style={{ fontSize: "xs", marginRight: "0.5rem" }} />
-                  <a href="https://www.linkedin.com/example" className="text-white">
+                  <a href="https://www.linkedin.com/company/kronicle/?originalSubdomain=in" className="text-white">
                     LinkedIn
                   </a>
                 </div>
@@ -81,11 +76,6 @@ const Footer: React.FC = () => {
                 <p>
                   <a href="#" className="text-white block">
                     About Us
-                  </a>
-                </p>
-                <p>
-                  <a href="#" className="text-white block">
-                    Members
                   </a>
                 </p>
                 <p>
