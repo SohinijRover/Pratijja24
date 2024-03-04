@@ -43,7 +43,7 @@ const Navbar = () => {
         <div
           className={`flex max-w-[1900px] mx-auto justify-between w-full p-4 lg:px-20 py-2 rounded-sm items-center text-white`}
         >
-          <div className="flex h-10 w-16 me-52">
+          <div className="hidden sm:flex h-10 w-16 me-52">
             <Image src={kiit} alt="kiit logo" height={100} width={100}  />
             <Image src={ksac} alt="ksac logo" height={100} width={100} className=" ps-4"/>
           
