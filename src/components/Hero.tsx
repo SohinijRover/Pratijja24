@@ -15,8 +15,9 @@ const Hero = () => {
     <>
       <div className="h-screen font-sans flex flex-col lg:flex-row items-center justify-center mt-40 lg:mt-0" style={gradientStyle}>
         <div className="text-center p-10 mt-10 md:w-1/3">
-          <h1 className="font-sans text-3xl sm:text-3xl">
-            Get Inside in The <br /> Philosopher&apos;s Mind
+          <h1 className="font-sans sm:text-3xl">
+            <b className="text-xl">19th Edition </b>
+           <span className="text-lg">of the Largest APD in the Eastern Circuit</span>
           </h1>
           <Link href="/contact">
             <button
