@@ -41,12 +41,12 @@ const Hero = () => {
               width={1000}
             />
           </div>
-          <div className=" container m-10 flex flex-col items-center justify-center md:left-10 2xl:left-0 md:w-1/3 mt-18">
+          <div className=" container m-10 flex flex-col items-center justify-center md:left-10 2xl:left-0 md:w-1/3 mt-18 mb-18">
             <Image src={coming} alt="" className="px-2 w-8/12" width={500} />
             <Timer />
           </div>
         </div>
-        <div className="text-center mt-[240px] md:mt-20">
+        <div className="text-center mt-[250px] mb-32  md:mt-30">
           <h1 className="text-lg md:text-[40px] font-semibold">15th - 17th March 2024</h1>
           <div className="flex justify-center items-center">
             <h1 className="text-white  md:text-[20px] lg:text-[25px] font-semibold text-center uppercase">win prizes worth </h1>
