@@ -14,7 +14,7 @@ const Hero = () => {
   return (
     <>
       <div className="h-screen " style={gradientStyle}>
-        <div className=" pt-32 h-[80vh] font-sans flex flex-col lg:flex-row items-center justify-center mt-40 lg:mt-0">
+        <div className=" pt-32 h-[80vh] font-sans flex flex-col lg:flex-row items-center justify-center mt-52 lg:mt-0">
           <div className="text-center p-10 mt-10 md:w-1/3">
             <h1 className="font-sans sm:text-3xl">
               <b className="text-xl">19th Edition </b>
