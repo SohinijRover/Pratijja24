@@ -46,7 +46,7 @@ const Hero = () => {
             <Timer />
           </div>
         </div>
-        <div className="text-center mt-[250px] mb-32  md:mt-30">
+        <div className="text-center mt-[250px] text-2xl mb-32  md:mt-30 ">
           <h1 className="text-lg md:text-[40px] font-semibold">15th - 17th March 2024</h1>
           <div className="flex justify-center items-center">
             <h1 className="text-white  md:text-[20px] lg:text-[25px] font-semibold text-center uppercase">win prizes worth </h1>
