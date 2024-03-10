@@ -2,6 +2,8 @@ const { PrismaClient } = require("@prisma/client");
 const fs = require("fs");
 const path = require("path");
 const createCsvWriter = require("csv-writer").createObjectCsvWriter;
+const xlsxPopulate = require("xlsx-populate");
+const { GoogleSpreadsheet } = require('google-spreadsheet');
 
 const prisma = new PrismaClient();
 
@@ -28,6 +30,9 @@ async function exportFormDataToCSV() {
     await exportToCSV(contactData, "contact.csv");
 
     console.log('CSV export completed successfully');
+
+    // Convert CSV to Excel and send to Google Sheets
+    await convertCSVToExcelAndSendToGoogleSheets();
   } catch (error) {
     console.error('Error during CSV export:', error);
   } finally {
@@ -46,8 +51,58 @@ async function exportToCSV(data, fileName) {
   console.log(`Data exported to ${filePath}`);
 }
 
+async function convertCSVToExcelAndSendToGoogleSheets() {
+  try {
+    // List of CSV files to process
+    const csvFiles = [
+      "crossteam_registerations.csv",
+      "institutionalteam_registerations.csv",
+      "independentAdj_registerations.csv",
+      "iasa.csv",
+      "contact.csv",
+    ];
 
+    // Create a new workbook
+    const workbook = await xlsxPopulate.fromBlankAsync();
+
+    for (const csvFile of csvFiles) {
+      // Read CSV data
+      const csvData = fs.readFileSync(path.join(__dirname, `data/${csvFile}`), "utf-8");
+
+      // Truncate sheet name if it exceeds 31 characters
+      const sheetName = csvFile.split(".")[0].slice(0, 31);
+
+      // Add a new sheet to the workbook
+      const sheet = workbook.addSheet(sheetName);
+
+      // Write CSV data to the sheet
+      const rows = csvData.trim().split("\n");
+      rows.forEach((row, rowIndex) => {
+        const columns = row.split(",");
+        columns.forEach((col, colIndex) => {
+          sheet.cell(rowIndex + 1, colIndex + 1).value(col);
+        });
+      });
+    }
+
+    // Save the workbook to an Excel file
+    const excelFilePath = path.join(__dirname, "data/all_data.xlsx");
+    await workbook.toFileAsync(excelFilePath);
+
+    console.log(`All CSV files converted to Excel: ${excelFilePath}`);
+
+
+  } catch (error) {
+    console.error('Error during CSV to Excel conversion and Google Sheets update:', error);
+  }
+}
+
+
+// Main part of the script
 (async () => {
-  await prisma.$connect();
-  await exportFormDataToCSV();
+  try {
+    await exportFormDataToCSV();
+  } catch (error) {
+    console.error('Error during data processing:', error);
+  }
 })();
