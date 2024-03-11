@@ -11,6 +11,9 @@
     "db:generate": "prisma generate",
     "db:push": "prisma db push"
   },
+  "prisma": {
+    "seed": "node prisma/seed.js"
+  },
   "dependencies": {
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
@@ -23,6 +26,7 @@
     "@radix-ui/react-slot": "^1.0.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
+    "csv-writer": "^1.6.0",
     "dotenv": "^16.4.1",
     "formik": "^2.4.5",
     "framer-motion": "^11.0.3",
