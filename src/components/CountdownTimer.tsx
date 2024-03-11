@@ -39,28 +39,28 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate }) => {
 
   return (
     <div>
-      <div className="flex gap-4 md:gap-10 text-transparent bg-clip-text bg-white">
-        <div className="flex flex-col gap-6 text-center">
+      <div className="flex gap-2 md:gap-4 text-transparent bg-clip-text bg-white">
+        <div className="flex flex-col gap-1 md:gap-6 text-center">
           <span>{formatTime(days)}</span>
-          <p className="uppercase md:text-xl text-base">
+          <p className="uppercase text-xs md:text-xl">
           days
           </p>
         </div>
-        <div className="flex flex-col gap-6 text-center">
+        <div className="flex flex-col gap-1 md:gap-6 text-center">
           <span>{formatTime(hours)}</span>
-          <p className="uppercase md:text-xl text-base">
+          <p className="uppercase md:text-xl text-xs">
           hours
           </p>
         </div>
-        <div className="flex flex-col gap-6 text-center">
+        <div className="flex flex-col gap-1 md:gap-6 text-center">
           <span>{formatTime(minutes)}</span>
-          <p className="uppercase md:text-xl text-base">
+          <p className="uppercase md:text-xl text-xs">
           minutes
           </p>
         </div>
-        <div className="flex flex-col gap-6 text-center">
+        <div className="flex flex-col gap-1 md:gap-6 text-center">
           <span>{formatTime(seconds)}</span>
-          <p className="uppercase md:text-xl text-base">
+          <p className="uppercase md:text-xl text-xs">
           seconds
           </p>
         </div>
