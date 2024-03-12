@@ -48,16 +48,16 @@ const Navbar = () => {
             <Image src={ksac} alt="ksac logo" height={100} width={100} className=" ps-4"/>
           
           </div>
-          <div>
+          <div className="flex-shrink-0">
             {!isOpen && (
               <Link href={"/"}>
                 <Image
                   src={logo}
                   alt="pratijja logo"
-                  width={200}
-                  height={200}
+                  width={100}
+                  height={50}
                   quality={50}
-                  className="w-60 lg:w-100 lg:h-100 sm:w-30 sm:h-30 m-4 pt-1"
+                  className="w-28 md:w-44 pt-1 lg:pt-2"
                 />
               </Link>
             )}

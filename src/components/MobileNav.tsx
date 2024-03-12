@@ -29,10 +29,10 @@ const MobileNav: React.FC<MobileNavProps> = ({ isOpen, toggleNavbar }) => {
               <Image
                 src={typeof logo === "string" ? logo : logo.src}
                 alt="MUN LOGO"
-                className={"w-100"}
-                width={200}
-                height={100}
+                width={100}
+                height={50}
                 placeholder="empty"
+                className=""
               />
             </Link>
           </li>

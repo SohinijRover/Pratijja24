@@ -4,7 +4,7 @@ import { FaLinkedinIn, FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa
 const Footer: React.FC = () => {
   return (
     <>
-      <div id="footer" className="w-full h-full " 
+      <div id="footer" className="w-full h-full pt-28 md:pt-36" 
       style={{
         background:
           "linear-gradient(180deg, rgba(6,38,34,1) 0%, rgba(26,55,50,1) 30%, rgba(38,90,81,1) 70%, rgba(127,204,195,1) 100%)",
