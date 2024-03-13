@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 const CountDown = () => {
-  const targetDate: any = new Date("March 16, 2024 24:00:00");
+  const targetDate: any = new Date("March 15, 2024 24:00:00");
   const [timeRemaining, setTimeRemaining] = useState(0);
 
   useEffect(() => {
