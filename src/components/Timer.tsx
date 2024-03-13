@@ -13,7 +13,7 @@ const Timer: React.FC = () => {
     <>
         <div className="h-auto flex items-center justify-end pe-12 my-auto translate-x-10 mt-6">
             <div className="text-center text-4xl sm:text-5xl font-semibold text-transparent bg-clip-text bg-grey">
-                <CountdownTimer targetDate={targetDate} />
+                <CountdownTimer />
             </div>
         </div>
     </>
